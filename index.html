@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hardcore</title>
+  <meta name="description" content="Hardcore: the hardest stuff out there. Hand-picked music videos with original track notes." />
+  <meta name="theme-color" content="#0d0f14" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <!--
+    AdSense site-level script (enable after approval). Replace ca-pub-XXXXXXXXXXXXXXXX.
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="./">
+        <span class="logo" id="station-logo" aria-hidden="true">HC</span>
+        <span class="brand-text">
+          <span class="station-name" id="station-name">Hardcore</span>
+          <span class="tagline" id="station-tagline">The hardest stuff out there. Nonstop.</span>
+        </span>
+      </a>
+      <span class="on-air" id="on-air"><span class="dot"></span><span id="on-air-label">Off air</span></span>
+    </div>
+  </header>
+
+  <!-- AD SLOT: Top leaderboard. 728x90 on desktop, 320x50 on mobile. -->
+  <div class="wrap ad-row ad-row-top">
+    <div class="ad-slot ad-728x90 ad-desktop" data-ad-size="728x90">
+      <span class="ad-label">Advertisement · 728×90</span>
+      <!--
+      <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1111111111"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      -->
+    </div>
+    <div class="ad-slot ad-320x50 ad-mobile" data-ad-size="320x50">
+      <span class="ad-label">Advertisement · 320×50</span>
+      <!--
+      <ins class="adsbygoogle" style="display:inline-block;width:320px;height:50px"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="2222222222"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      -->
+    </div>
+  </div>
+
+  <main class="wrap layout">
+    <div class="main-col">
+      <!-- PLAYER: official YouTube IFrame Player API. Always visible, nothing on top of it. -->
+      <section class="player-card" aria-label="Player">
+        <div class="player-frame">
+          <div id="yt-player"></div>
+          <div class="player-fallback" id="player-fallback" hidden>
+            Loading the YouTube player… If it doesn't appear, check your connection or content blocker.
+          </div>
+        </div>
+
+        <div class="now-playing">
+          <img class="np-thumb" id="np-thumb" alt="" width="96" height="72" />
+          <div class="np-meta">
+            <span class="np-kicker">Now playing</span>
+            <h1 class="np-title" id="np-title">Tuning in…</h1>
+            <a class="np-channel" id="np-channel" target="_blank" rel="noopener"></a>
+          </div>
+        </div>
+
+        <div class="controls" role="group" aria-label="Playback controls">
+          <button class="ctl" id="btn-shuffle" aria-pressed="false" title="Shuffle" aria-label="Shuffle">
+            <svg viewBox="0 0 24 24"><path d="M17 3h4v4h-2V6.4l-4.3 4.3-1.4-1.4L17.6 5H17V3zM3 5.4 4.4 4l15.6 15.6V17h2v4h-4v-2h.6L3 5.4zm6.3 7.9 1.4 1.4L4.4 21 3 19.6l6.3-6.3z"/></svg>
+          </button>
+          <button class="ctl" id="btn-prev" title="Previous" aria-label="Previous">
+            <svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zM9.5 12 18 6v12z"/></svg>
+          </button>
+          <button class="ctl ctl-main" id="btn-play" title="Play" aria-label="Play">
+            <svg class="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <svg class="i-pause" viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+          </button>
+          <button class="ctl" id="btn-next" title="Next" aria-label="Next">
+            <svg viewBox="0 0 24 24"><path d="M16 6h2v12h-2zM6 6l8.5 6L6 18z"/></svg>
+          </button>
+          <label class="volume" title="Volume">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4z"/></svg>
+            <span class="sr-only">Volume</span>
+            <input type="range" id="volume" min="0" max="100" value="80" />
+          </label>
+        </div>
+        <div class="progress" aria-hidden="true"><div class="progress-bar" id="progress-bar"></div></div>
+        <div class="times"><span id="t-cur">0:00</span><span id="t-dur">0:00</span></div>
+      </section>
+
+      <section class="card" aria-labelledby="queue-h">
+        <h2 id="queue-h">Up next</h2>
+        <ol class="queue" id="queue"></ol>
+      </section>
+
+      <!-- AD SLOT: Below the queue. 728x90 on desktop, 300x250 on mobile. -->
+      <div class="ad-row">
+        <div class="ad-slot ad-728x90 ad-desktop" data-ad-size="728x90">
+          <span class="ad-label">Advertisement · 728×90</span>
+          <!--
+          <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
+               data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="3333333333"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+          -->
+        </div>
+        <div class="ad-slot ad-300x250 ad-mobile" data-ad-size="300x250">
+          <span class="ad-label">Advertisement · 300×250</span>
+          <!--
+          <ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px"
+               data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="4444444444"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+          -->
+        </div>
+      </div>
+
+      <section class="card" aria-labelledby="notes-h">
+        <h2 id="notes-h">Track notes</h2>
+        <div id="track-notes" class="track-notes"></div>
+      </section>
+    </div>
+
+    <aside class="side-col">
+      <!-- AD SLOT: Sidebar medium rectangle 300x250. -->
+      <div class="ad-slot ad-300x250" data-ad-size="300x250">
+        <span class="ad-label">Advertisement · 300×250</span>
+        <!--
+        <ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="5555555555"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        -->
+      </div>
+
+      <section class="card about" aria-labelledby="about-h">
+        <h2 id="about-h">About the station</h2>
+        <div id="about"></div>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year"></span> <span class="station-name-ref">Hardcore</span>. Videos are played with the official YouTube embedded player and belong to their owners.</p>
+      <p><a href="privacy.html">Privacy policy</a></p>
+    </div>
+  </footer>
+
+  <script src="playlist.js"></script>
+  <script src="track-meta.js" onerror="window.TRACK_META = {}"></script>
+  <script src="app.js"></script>
+</body>
+</html>
