@@ -76,6 +76,9 @@
 
   function renderQueue() {
     el.queue.textContent = "";
+    el.queue.scrollTop = 0; // current track is always first
+    var qc = document.getElementById("queue-count");
+    if (qc) qc.textContent = tracks.length > 1 ? tracks.length + " tracks" + (shuffleOn ? " · shuffled" : "") : "";
     if (!tracks.length) {
       var li0 = document.createElement("li"); li0.className = "queue-empty";
       li0.textContent = MODE === "playlist" ? "Loading playlist…" : "No tracks in playlist.js yet.";
@@ -122,6 +125,9 @@
       var p = document.createElement("p"); p.textContent = t.notes || (CFG.playlistNotes || {})[t.id] || "Notes coming soon.";
       a.appendChild(h); a.appendChild(p); el.notes.appendChild(a);
     });
+    // Keep the current track's note in view inside the scrollable notes box.
+    var curNote = el.notes.querySelector("article.current");
+    if (curNote) el.notes.scrollTop += curNote.getBoundingClientRect().top - el.notes.getBoundingClientRect().top;
   }
 
   // Publish state for optional add-ons (ratings.js): current video ID + queue IDs.

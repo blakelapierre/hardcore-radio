@@ -166,3 +166,11 @@ a { color: #ff8fa3; }
   .now-playing { flex-wrap: wrap; }
   .rating { margin-left: 0; width: 100%; flex-direction: row; align-items: center; justify-content: space-between; }
 }
+
+/* Long lists: queue and track notes scroll inside their cards */
+.queue { max-height: 460px; overflow-y: auto; overscroll-behavior: contain; padding-right: 4px; scrollbar-width: thin; scrollbar-color: #3a4357 transparent; }
+.track-notes { max-height: 520px; overflow-y: auto; overscroll-behavior: contain; padding-right: 6px; scrollbar-width: thin; scrollbar-color: #3a4357 transparent; }
+.queue::-webkit-scrollbar, .track-notes::-webkit-scrollbar { width: 6px; }
+.queue::-webkit-scrollbar-thumb, .track-notes::-webkit-scrollbar-thumb { background: #3a4357; border-radius: 6px; }
+.queue-count { color: var(--muted); font-weight: 400; font-size: .85rem; margin-left: 6px; }
+@media (max-width: 760px) { .queue { max-height: 360px; } .track-notes { max-height: 420px; } }
