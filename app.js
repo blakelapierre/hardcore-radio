@@ -90,7 +90,7 @@
       var t = tracks[order[p]];
       var li = document.createElement("li");
       if (k === 0) li.className = "current";
-      var b = document.createElement("button"); b.type = "button"; b.dataset.pos = p;
+      var b = document.createElement("button"); b.type = "button"; b.dataset.pos = p; b.dataset.id = t.id;
       b.setAttribute("aria-label", "Play " + (t.title || t.id));
       var num = document.createElement("span"); num.className = "q-num"; num.textContent = k === 0 ? "▶" : String(k);
       var img = document.createElement("img"); img.src = thumbUrl(t.id); img.alt = ""; img.loading = "lazy";
@@ -124,7 +124,14 @@
     });
   }
 
-  function renderAll() { renderNowPlaying(); renderQueue(); renderNotes(); }
+  // Publish state for optional add-ons (ratings.js): current video ID + queue IDs.
+  function notify() {
+    var t = current();
+    window.RadioState = { current: t ? t.id : null, ids: tracks.map(function (x) { return x.id; }) };
+    try { document.dispatchEvent(new CustomEvent("radio:tracks", { detail: window.RadioState })); } catch (_) {}
+  }
+
+  function renderAll() { renderNowPlaying(); renderQueue(); renderNotes(); notify(); }
 
   function setPlaying(on) {
     playing = on;
@@ -166,7 +173,7 @@
     if (shuffleOn) for (var i = rest.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var x = rest[i]; rest[i] = rest[j]; rest[j] = x; }
     order = [curIdx].concat(rest); pos = 0;
     if (!shuffleOn) { order = tracks.map(function (_, i) { return i; }); pos = curIdx; }
-    renderQueue();
+    renderQueue(); notify();
   }
   function togglePlay() {
     if (!ready) return;

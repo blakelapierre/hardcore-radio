@@ -4,5 +4,10 @@ window.TRACK_META = {
     "title": "Steve Grant - The Seventh Seal(Million Mask March)",
     "channel": "Steve Grant",
     "channelUrl": "https://www.youtube.com/@stevegrant8805"
+  },
+  "1yOoM7_AseY": {
+    "title": "The 2nd Ammendment feat. Immortal Technique",
+    "channel": "Poison Pen - Topic",
+    "channelUrl": "https://www.youtube.com/channel/UCQ81HlRNBAtB3ZyaVAtz_gg"
   }
 };

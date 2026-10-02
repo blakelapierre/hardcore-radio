@@ -23,7 +23,7 @@ window.STATION_CONFIG = {
   source: {
     type: "videos",             // "videos" | "playlist"
     playlistId: "",             // used when type === "playlist", e.g. "PLxxxxxxxxxxxxxxxx"
-    loop: true,                 // loop the station when the last track ends
+    loop: true,                 // after the last track, start the list again (true = nonstop radio, false = stop)
   },
 
   // Track list for "videos" mode. title/channel are optional: if omitted, the site uses
@@ -38,6 +38,15 @@ window.STATION_CONFIG = {
         "Placeholder track note. Write a few original sentences here about why this track is " +
         "on the station: the artist, the mood, where you first heard it, what to listen for. " +
         "Original commentary like this is what makes the site more than a page of embeds.",
+    },
+    {
+      id: "1yOoM7_AseY",
+      title: "",
+      channel: "",
+      // EDITABLE: placeholder note
+      notes:
+        "Placeholder track note. Replace with a few original sentences about this track: who made it, " +
+        "why it hits as hard as it does, and what to listen for.",
     },
   ],
 

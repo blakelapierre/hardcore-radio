@@ -26,6 +26,9 @@
     <h2>Cookies and local storage</h2>
     <p>The site itself does not set tracking cookies. It saves your volume setting in your browser's local storage, and that value never leaves your device. Third parties named below (Google and YouTube) may set cookies or use similar technologies when you visit.</p>
 
+    <h2>Track ratings</h2>
+    <p>If you rate a track, the site signs you in anonymously with Google Firebase Authentication. This creates a random ID and stores it in your browser (IndexedDB/local storage). No name, email, or account is needed. Your vote (up or down) is saved in Google Cloud Firestore under that random ID, and the vote totals are public. Firebase processes data as described in the <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase privacy information</a>. Clearing your browser data removes the ID from your device.</p>
+
     <h2>Google advertising (AdSense)</h2>
     <ul>
       <li>Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to this website or other websites.</li>

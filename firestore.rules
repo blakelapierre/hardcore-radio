@@ -1,0 +1,62 @@
+rules_version = '2';
+
+// Hardcore: per-track ratings.
+//   tracks/{videoId}             { up: int, down: int }          public aggregate
+//   tracks/{videoId}/votes/{uid} { value: 1 | -1, updatedAt }    one vote per (anonymous) user
+// Every vote change must update the vote doc AND the aggregate in the same transaction/batch,
+// and the rules check that the counters move by exactly that user's change.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function validId(id) { return id.matches('^[A-Za-z0-9_-]{11}$'); }
+    function trackPath(v) { return /databases/$(database)/documents/tracks/$(v); }
+    function votePath(v, uid) { return /databases/$(database)/documents/tracks/$(v)/votes/$(uid); }
+
+    function voteBefore(v, uid) { return exists(votePath(v, uid)) ? get(votePath(v, uid)).data.value : 0; }
+    function voteAfter(v, uid) { return existsAfter(votePath(v, uid)) ? getAfter(votePath(v, uid)).data.value : 0; }
+    function isUp(x) { return x == 1 ? 1 : 0; }
+    function isDown(x) { return x == -1 ? 1 : 0; }
+
+    // Aggregate after == aggregate before + this user's delta, and the vote actually changed.
+    function consistent(v, uid) {
+      let b = exists(trackPath(v)) ? get(trackPath(v)).data : {'up': 0, 'down': 0};
+      let a = getAfter(trackPath(v)).data;
+      let o = voteBefore(v, uid);
+      let n = voteAfter(v, uid);
+      return o != n
+        && a.up == b.up + isUp(n) - isUp(o)
+        && a.down == b.down + isDown(n) - isDown(o);
+    }
+
+    match /tracks/{videoId} {
+      allow read: if true;
+      allow create, update: if request.auth != null
+        && validId(videoId)
+        && request.resource.data.keys().hasOnly(['up', 'down'])
+        && request.resource.data.up is int && request.resource.data.up >= 0
+        && request.resource.data.down is int && request.resource.data.down >= 0
+        && consistent(videoId, request.auth.uid);
+      allow delete: if false;
+
+      match /votes/{uid} {
+        allow read: if true;
+        allow create, update: if request.auth != null
+          && request.auth.uid == uid
+          && validId(videoId)
+          && request.resource.data.keys().hasOnly(['value', 'updatedAt'])
+          && request.resource.data.value in [1, -1]
+          && request.resource.data.updatedAt == request.time
+          && existsAfter(trackPath(videoId))
+          && consistent(videoId, uid);
+        // Removing your vote (toggle off) is allowed, with the matching decrement.
+        allow delete: if request.auth != null
+          && request.auth.uid == uid
+          && existsAfter(trackPath(videoId))
+          && consistent(videoId, uid);
+      }
+    }
+
+    // Everything else is closed.
+    match /{document=**} { allow read, write: if false; }
+  }
+}

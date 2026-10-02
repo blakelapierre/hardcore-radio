@@ -1,6 +1,6 @@
 # Hardcore: web radio (prototype)
 
-Live: https://blakelapierre.github.io/hardcore-radio/
+Live: https://hardcoreradio.website/ (custom domain via `CNAME`; also reachable at https://blakelapierre.github.io/hardcore-radio/)
 
 A static "web radio" site that plays YouTube videos through the **official YouTube IFrame Player API**, with display-ad placeholders placed around the player.
 
@@ -8,6 +8,10 @@ A static "web radio" site that plays YouTube videos through the **official YouTu
 index.html        page layout: player, Now Playing, controls, queue, notes, about, ad slots
 styles.css        dark theme + responsive layout (desktop / tablet / mobile)
 app.js            player logic (IFrame API, queue, shuffle, auto-advance, volume)
+ratings.js        thumbs up/down ratings (Firebase, loaded only when configured)
+firebase-config.js  ← paste your Firebase web config here (placeholders = ratings hidden)
+firestore.rules   Firestore security rules for ratings
+firebase.json     Firebase CLI config (rules deploy + local emulators)
 playlist.js       ← STATION CONFIG: name, tagline, tracks/playlist, track notes, about text
 track-meta.js     generated titles/channels (from YouTube oEmbed), see below
 tools/fetch_titles.py   build step that regenerates track-meta.js
@@ -37,7 +41,7 @@ Edit `playlist.js`:
   You control the order, and every track gets its own note.
 - **A regular YouTube playlist**: set `source.type: "playlist"` and `source.playlistId: "PL…"`. The player loads it with `loadPlaylist({ listType: "playlist", list })`, and the queue mirrors `player.getPlaylist()`. You can add notes per video in `playlistNotes`.
   Don't use auto-generated Mix lists (`RD…`). They change from viewer to viewer and can't be relied on.
-- `source.loop` (default `true`) loops the station. With one track, that track repeats.
+- `source.loop` (default `true`) starts the list again after the last track, so the station plays nonstop. Set it to `false` to stop after the last track. Tracks auto-advance either way.
 
 After you change the track IDs, refresh the titles:
 ```bash
@@ -49,6 +53,33 @@ If this step is skipped or fails, the site reads the title and channel from `pla
 In `playlist.js` → `station`: `name`, `tagline`, `logoText` (badge letters), or `logoImage` (e.g. `assets/logo.png`). The `about` array holds the About-the-station paragraphs. The current tagline and About text are placeholders marked `EDITABLE`. The page `<title>` and the static header text in `index.html`/`privacy.html` also say "Hardcore", and so do the footer and the logo initials ("HC"). Update those too, for SEO and for visitors without JS.
 
 Set `privacyEnhancedMode: true` to embed from `youtube-nocookie.com`.
+
+## Track ratings (Firebase)
+Visitors can give each track a thumbs up or down. The Now Playing panel shows the up/down counts and "% liked · N votes", and the queue shows a 👍 % badge for each rated track. Clicking your current vote again removes it.
+
+How it works: `ratings.js` loads the Firebase modular SDK (v12.19.0) from `www.gstatic.com`. There's no build step. The visitor is signed in with **Anonymous Auth** the first time they vote. Votes are stored at `tracks/{videoId}/votes/{uid}` as `{ value: 1 | -1, updatedAt }`, and each vote change runs in a transaction that also updates the counter doc `tracks/{videoId}` `{ up, down }`. `firestore.rules` allows public reads. It only allows a signed-in user to write **their own** vote doc, with value 1 or -1, and only if the counters change by exactly that vote in the same write. Nobody can set counters directly or delete them.
+While `firebase-config.js` still holds the `YOUR_…` placeholders, the rating UI stays hidden, the SDK is never downloaded, and nothing is logged.
+Limitation: with anonymous auth, "one vote per visitor" really means one vote per browser. Someone who clears their storage or uses a private window gets a new ID. For stronger protection, add Firebase App Check (reCAPTCHA Enterprise) later.
+
+### Steps for Blake (about 10 minutes)
+1. **Create a project:** go to https://console.firebase.google.com and click **Create a project** (e.g. `hardcore-radio`). Google Analytics is optional; you can turn it off.
+2. **Add a web app:** Project Overview → **Add app** → **Web** (`</>`). Use the nickname `hardcore-radio-web` and do **not** tick Firebase Hosting. Click **Register app**.
+3. **Paste the config:** copy the `firebaseConfig` values it shows (`apiKey`, `authDomain`, `projectId`, `storageBucket`, `messagingSenderId`, `appId`) into `firebase-config.js`, replacing the `YOUR_…` placeholders. These values are not secret; the security rules protect the data. (You can find them again later under Project settings ⚙ → General → Your apps.)
+4. **Enable Anonymous auth:** Build → **Authentication** → **Get started** → **Sign-in method** tab → **Anonymous** → Enable → Save.
+5. **Create Firestore:** Build → **Firestore Database** → **Create database** → Standard edition, location e.g. `nam5 (United States)` (this can't be changed later) → **Start in production mode** → Create.
+6. **Publish the rules:** Firestore Database → **Rules** tab → replace everything with the contents of `firestore.rules` → **Publish**.
+   Or use the CLI: `npx firebase-tools login`, then `npx firebase-tools deploy --only firestore:rules --project <your-project-id>` from this folder.
+7. **Add authorized domains:** Authentication → **Settings** tab → **Authorized domains** → **Add domain** → add `hardcoreradio.website` and `blakelapierre.github.io`. (`localhost` is there by default.)
+8. **Optional (recommended): restrict the API key.** Google Cloud console → APIs & Services → Credentials → open the "Browser key (auto created by Firebase)" → Application restrictions: **Websites** → add `https://hardcoreradio.website/*`, `https://blakelapierre.github.io/*`, `http://localhost:8080/*`.
+9. Commit and push `firebase-config.js`. Within a minute or two GitHub Pages redeploys and the thumbs appear under Now Playing.
+
+### Testing locally with the emulator
+Requires Java 21+.
+```bash
+npx firebase-tools emulators:start --only auth,firestore --project demo-hardcore   # uses firestore.rules
+python3 -m http.server 8080
+# open http://localhost:8080/?emulator=1   (?emulator=1 only works on localhost; it uses a demo project)
+```
 
 ## Ad slots
 Each slot in `index.html` is a `<div class="ad-slot …">` placeholder holding a commented AdSense `<ins>` template:
