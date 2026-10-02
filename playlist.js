@@ -34,19 +34,17 @@ window.STATION_CONFIG = {
       id: "dnhqZcG0tew",
       title: "",
       channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
       notes:
-        "Placeholder track note. Write a few original sentences here about why this track is " +
-        "on the station: the artist, the mood, where you first heard it, what to listen for. " +
-        "Original commentary like this is what makes the site more than a page of embeds.",
+        "Recorded where rap rarely goes: live outside the White House at the Million Mask March on November 5, 2013. That's the annual Guy Fawkes Day protest tied to the hacktivist collective Anonymous, where crowds show up in V for Vendetta masks. Steve Grant wrote the words, and the music is credited to Courtney Driver. The title comes from the Book of Revelation, where the opening of the seventh seal starts the end times, and Grant pitches the moment as that kind of turning point. Over three verses he casts rappers, hackers, activists and \"infowarriors\" as one awakened movement pushing back against what he describes as threatened freedoms, media deception and a collapsing \"new world order.\" The hook is a chant about seeing through the lies and not being afraid. It's raw protest rap, crowd noise and all: the artist's manifesto, delivered at street level.",
     },
     {
       id: "1yOoM7_AseY",
       title: "",
       channel: "",
-      // EDITABLE: placeholder note
+      // EDITABLE track note (sources: see README "Track note sources")
       notes:
-        "Placeholder track note. Replace with a few original sentences about this track: who made it, " +
-        "why it hits as hard as it does, and what to listen for.",
+        "Two members of New York's underground Stronghold crew, back to back. Poison Pen (Lékan Herron) is a Bed-Stuy, Brooklyn battle MC who came up through the late-'90s NYC battle circuit, including the Blaze Battle, and went on to host Da Cypha Emcee Battles. Immortal Technique (Felipe Coronel) was born in Lima, Peru, and raised in Harlem. He's the fiercely independent voice behind Revolutionary Vol. 1 and 2. The track comes from Pen's 2009 album The Money Shot, and Pen's part opens by congratulating the newly elected President Obama before telling him hands off his guns. The song is the artists' case for armed self-defense, aimed at a state and police they say won't protect their neighborhoods. Technique ties it to the arms trade, Gaza and the barbarian sacks of Rome. Pen points to Haiti and to the revolution America was founded on. Reviews of the album singled it out as a standout.",
     },
   ],
 
@@ -55,10 +53,9 @@ window.STATION_CONFIG = {
     // "VIDEO_ID": "Your note about this track…",
   },
 
-  // EDITABLE: placeholder About-the-station text. Replace with Blake's own words.
+  // EDITABLE: About-the-station text
   about: [
-    "Hardcore plays the hardest stuff out there, picked by hand by Blake. " +
-      "Every track streams through YouTube's official embedded player, so artists keep their views.",
-    "Each track gets a short note on why it made the cut. Got something heavier? Get in touch.",
+    "Hardcore is an independent web station for the hardest stuff out there: rap and protest music with something to say and the force to say it. Every track is hand-picked by Blake and streamed through YouTube's official player, so the artists keep their views.",
+    "Each track comes with our own notes on who made it and what it's about. The views in the songs belong to the artists. Got something heavier for the rotation? Get in touch."
   ],
 };
