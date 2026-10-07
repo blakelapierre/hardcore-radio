@@ -7,6 +7,9 @@
 
   var CFG = window.STATION_CONFIG || {};
   var META = window.TRACK_META || {};
+  var ART = window.STATION_ARTISTS || {};
+  var ARTISTS = ART.artists || {};           // slug -> {name, bio}
+  var TRACK_ARTISTS = ART.tracks || {};      // video ID -> [slugs], main artist first
   var SRC = CFG.source || { type: "videos" };
   var MODE = SRC.type === "playlist" && SRC.playlistId ? "playlist" : "videos";
   var LOOP = SRC.loop !== false;
@@ -18,7 +21,11 @@
     title: $("np-title"), channel: $("np-channel"), thumb: $("np-thumb"),
     bar: $("progress-bar"), cur: $("t-cur"), dur: $("t-dur"), onAir: $("on-air"),
     onAirLabel: $("on-air-label"), fallback: $("player-fallback"),
+    nowNote: $("now-note"), nowArtists: $("now-artists"), notesCount: $("notes-count"),
+    artistsPanel: $("artists-panel"), artistList: $("artist-list"), artistsCount: $("artists-count"),
+    artistsClear: $("artists-clear"), artistCol: $("artist-col"), artistsSlot: $("artists-slot"),
   };
+  var selectedArtist = null; // slug whose tracks are highlighted in the queue
 
   // ---------- Track model ----------
   // tracks: [{id, title, channel, channelUrl, notes}]
@@ -93,6 +100,7 @@
       var t = tracks[order[p]];
       var li = document.createElement("li");
       if (k === 0) li.className = "current";
+      if (selectedArtist && artistsOf(t.id).indexOf(selectedArtist) !== -1) li.classList.add("artist-match");
       var b = document.createElement("button"); b.type = "button"; b.dataset.pos = p; b.dataset.id = t.id;
       b.setAttribute("aria-label", "Play " + (t.title || t.id));
       var num = document.createElement("span"); num.className = "q-num"; num.textContent = k === 0 ? "▶" : String(k);
@@ -113,6 +121,85 @@
     }
   }
 
+  function noteFor(t) { return (t && (t.notes || (CFG.playlistNotes || {})[t.id])) || ""; }
+  function artistsOf(id) { return (TRACK_ARTISTS[id] || []).filter(function (s) { return ARTISTS[s]; }); }
+  function artistNames(id) { return artistsOf(id).map(function (s) { return ARTISTS[s].name; }); }
+
+  // The current track's note, shown directly under the player.
+  function renderNowNote() {
+    if (!el.nowNote) return;
+    var t = current();
+    var names = t ? artistNames(t.id) : [];
+    text(el.nowArtists, names.length ? (names.length > 1 ? "Artists: " : "Artist: ") + names.join(", ") : "");
+    el.nowArtists.hidden = !names.length;
+    text(el.nowNote, t ? (noteFor(t) || "Notes for this track are coming soon.") : "");
+  }
+
+  // ---------- Artists panel ----------
+  // Tracks per artist, in station order (indices into tracks).
+  function artistTrackIdx(slug) {
+    var out = [];
+    tracks.forEach(function (t, i) { if (artistsOf(t.id).indexOf(slug) !== -1) out.push(i); });
+    return out;
+  }
+  function sortKey(name) { return name.replace(/^the\s+/i, "").toLowerCase(); }
+  function buildArtists() {
+    if (!el.artistList) return;
+    el.artistList.textContent = "";
+    var slugs = Object.keys(ARTISTS).filter(function (s) { return artistTrackIdx(s).length; });
+    slugs.sort(function (a, b) { return sortKey(ARTISTS[a].name) < sortKey(ARTISTS[b].name) ? -1 : 1; });
+    text(el.artistsCount, slugs.length ? String(slugs.length) : "");
+    if (!slugs.length) { el.artistCol.hidden = true; return; }
+    slugs.forEach(function (slug) {
+      var a = ARTISTS[slug], n = artistTrackIdx(slug).length;
+      var li = document.createElement("li");
+      var b = document.createElement("button"); b.type = "button"; b.className = "artist"; b.dataset.artist = slug;
+      b.setAttribute("aria-pressed", "false");
+      b.setAttribute("aria-label", "Play " + a.name + " (" + n + (n === 1 ? " track" : " tracks") + ")");
+      var head = document.createElement("span"); head.className = "artist-head";
+      var nm = document.createElement("span"); nm.className = "artist-name"; nm.textContent = a.name;
+      var ct = document.createElement("span"); ct.className = "artist-count"; ct.textContent = n + (n === 1 ? " track" : " tracks");
+      head.appendChild(nm); head.appendChild(ct);
+      var bio = document.createElement("span"); bio.className = "artist-bio"; bio.textContent = a.bio || "";
+      b.appendChild(head); b.appendChild(bio); li.appendChild(b); el.artistList.appendChild(li);
+    });
+  }
+  function renderArtists() {
+    if (!el.artistList) return;
+    var t = current(), live = t ? artistsOf(t.id) : [];
+    el.artistList.querySelectorAll("button.artist").forEach(function (b) {
+      var s = b.dataset.artist;
+      b.classList.toggle("on-air", live.indexOf(s) !== -1);
+      b.setAttribute("aria-pressed", String(s === selectedArtist));
+    });
+    el.artistsClear.hidden = !selectedArtist;
+  }
+  // Click an artist: highlight their tracks and play their next one (first one if none is playing).
+  function playArtist(slug) {
+    var idx = artistTrackIdx(slug);
+    if (!idx.length) return;
+    selectedArtist = slug;
+    var n = order.length, target = null;
+    var curIsTheirs = idx.indexOf(order[pos]) !== -1;
+    for (var k = curIsTheirs ? 1 : 0; k <= n; k++) {
+      var p = (pos + k) % n;
+      if (idx.indexOf(order[p]) !== -1) { target = p; break; }
+    }
+    if (target === null || (target === pos && curIsTheirs)) { renderAll(); return; }
+    playAt(target);
+  }
+  // Wide screens: artists in the left column, always open. Narrower: collapsible, below the player.
+  var wideMq = window.matchMedia ? window.matchMedia("(min-width: 1200px)") : null;
+  var userOpened = false;
+  function placeArtists() {
+    if (!el.artistsPanel) return;
+    var wide = wideMq ? wideMq.matches : true;
+    var home = wide ? el.artistCol : el.artistsSlot;
+    if (el.artistsPanel.parentNode !== home) home.appendChild(el.artistsPanel);
+    el.artistCol.classList.toggle("is-empty", !wide);
+    el.artistsPanel.open = wide ? true : userOpened;
+  }
+
   function renderNotes() {
     el.notes.textContent = "";
     var list = MODE === "videos" ? tracks : tracks.filter(function (t) { return (CFG.playlistNotes || {})[t.id]; });
@@ -125,9 +212,7 @@
       var p = document.createElement("p"); p.textContent = t.notes || (CFG.playlistNotes || {})[t.id] || "Notes coming soon.";
       a.appendChild(h); a.appendChild(p); el.notes.appendChild(a);
     });
-    // Keep the current track's note in view inside the scrollable notes box.
-    var curNote = el.notes.querySelector("article.current");
-    if (curNote) el.notes.scrollTop += curNote.getBoundingClientRect().top - el.notes.getBoundingClientRect().top;
+    if (el.notesCount) text(el.notesCount, list.length > 1 ? String(list.length) : "");
   }
 
   // Publish state for optional add-ons (ratings.js): current video ID + queue IDs.
@@ -137,7 +222,7 @@
     try { document.dispatchEvent(new CustomEvent("radio:tracks", { detail: window.RadioState })); } catch (_) {}
   }
 
-  function renderAll() { renderNowPlaying(); renderQueue(); renderNotes(); notify(); }
+  function renderAll() { renderNowPlaying(); renderNowNote(); renderQueue(); renderNotes(); renderArtists(); notify(); }
 
   function setPlaying(on) {
     playing = on;
@@ -200,6 +285,7 @@
     order = tracks.map(function (_, i) { return i; });
     var idx = player.getPlaylistIndex();
     pos = idx >= 0 ? idx : 0;
+    buildArtists();
     renderAll();
   }
 
@@ -296,6 +382,18 @@
     var b = e.target.closest("button[data-pos]");
     if (b) playAt(parseInt(b.dataset.pos, 10));
   });
+  if (el.artistList) {
+    el.artistList.addEventListener("click", function (e) {
+      var b = e.target.closest("button[data-artist]");
+      if (b) playArtist(b.dataset.artist);
+    });
+    el.artistsClear.addEventListener("click", function () { selectedArtist = null; renderQueue(); renderArtists(); });
+    el.artistsPanel.addEventListener("toggle", function () {
+      if (!(wideMq && wideMq.matches)) userOpened = el.artistsPanel.open;
+      else if (!el.artistsPanel.open) el.artistsPanel.open = true; // stays open in the left column
+    });
+    if (wideMq) (wideMq.addEventListener ? wideMq.addEventListener("change", placeArtists) : wideMq.addListener(placeArtists));
+  }
   document.addEventListener("keydown", function (e) {
     if (e.target.matches("input, textarea") || e.metaKey || e.ctrlKey) return;
     if (e.key === " " && e.target === document.body) { e.preventDefault(); togglePlay(); }
@@ -304,6 +402,8 @@
   });
 
   renderStation();
+  buildArtists();
+  placeArtists();
   setPlaying(false); text(el.onAirLabel, "Off air");
   renderAll();
   loadApi();

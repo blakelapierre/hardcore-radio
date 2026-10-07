@@ -7,7 +7,7 @@
   <meta name="description" content="Hardcore: the hardest stuff out there. Hand-picked music videos with original track notes." />
   <meta name="theme-color" content="#0d0f14" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=202610062314" />
+  <link rel="stylesheet" href="styles.css?v=202610062345" />
   <!--
     AdSense site-level script (enable after approval). Replace ca-pub-XXXXXXXXXXXXXXXX.
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
@@ -48,6 +48,16 @@
   </div>
 
   <main class="wrap layout">
+    <!-- ARTISTS: left column on wide screens; app.js moves it below the player on narrower screens. -->
+    <aside class="artist-col" id="artist-col" aria-label="Artists">
+      <details class="card artists" id="artists-panel">
+        <summary class="artists-summary"><h2 id="artists-h">Artists <span class="queue-count" id="artists-count"></span></h2></summary>
+        <p class="artists-hint">Tap an artist to play their tracks. Their tracks are highlighted in the queue.</p>
+        <button type="button" class="artists-clear" id="artists-clear" hidden>Clear highlight</button>
+        <ul class="artist-list" id="artist-list"></ul>
+      </details>
+    </aside>
+
     <div class="main-col">
       <!-- PLAYER: official YouTube IFrame Player API. Always visible, nothing on top of it. -->
       <section class="player-card" aria-label="Player">
@@ -105,6 +115,15 @@
         <div class="times"><span id="t-cur">0:00</span><span id="t-dur">0:00</span></div>
       </section>
 
+      <!-- Current track's note, directly under the player (updates on every track change). -->
+      <section class="card now-note" id="now-note-card" aria-labelledby="now-note-h" aria-live="polite">
+        <h2 id="now-note-h">About this track</h2>
+        <p class="now-artists" id="now-artists"></p>
+        <p class="now-note-text" id="now-note"></p>
+      </section>
+
+      <div id="artists-slot"></div>
+
       <section class="card" aria-labelledby="queue-h">
         <h2 id="queue-h">Up next <span class="queue-count" id="queue-count"></span></h2>
         <ol class="queue" id="queue"></ol>
@@ -130,10 +149,10 @@
         </div>
       </div>
 
-      <section class="card" aria-labelledby="notes-h">
-        <h2 id="notes-h">Track notes</h2>
+      <details class="card all-notes" id="all-notes">
+        <summary><h2 id="notes-h">All track notes <span class="queue-count" id="notes-count"></span></h2></summary>
         <div id="track-notes" class="track-notes"></div>
-      </section>
+      </details>
     </div>
 
     <aside class="side-col">
@@ -161,10 +180,11 @@
     </div>
   </footer>
 
-  <script src="playlist.js?v=202610062314"></script>
-  <script src="track-meta.js?v=202610062314" onerror="window.TRACK_META = {}"></script>
-  <script src="app.js?v=202610062314"></script>
+  <script src="playlist.js?v=202610062345"></script>
+  <script src="track-meta.js?v=202610062345" onerror="window.TRACK_META = {}"></script>
+  <script src="artists.js?v=202610062345" onerror="window.STATION_ARTISTS = {}"></script>
+  <script src="app.js?v=202610062345"></script>
   <script src="firebase-config.js"></script>
-  <script type="module" src="ratings.js?v=202610062314"></script>
+  <script type="module" src="ratings.js?v=202610062345"></script>
 </body>
 </html>

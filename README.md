@@ -14,6 +14,7 @@ firestore.rules   Firestore security rules for ratings
 firebase.json     Firebase CLI config (rules deploy + local emulators)
 playlist.js       ← STATION CONFIG: name, tagline, tracks/playlist, track notes, about text
 track-meta.js     generated titles/channels (from YouTube oEmbed), see below
+artists.js        artists panel: artist bios + which artists are on each track
 tools/fetch_titles.py   build step that regenerates track-meta.js
 privacy.html      privacy policy placeholder (cookies, Google ads, YouTube embeds)
 ads.txt           ads.txt placeholder
@@ -48,6 +49,17 @@ After you change the track IDs, refresh the titles:
 python3 tools/fetch_titles.py     # writes track-meta.js via https://www.youtube.com/oembed
 ```
 If this step is skipped or fails, the site reads the title and channel from `player.getVideoData()` at runtime. Videos whose owners disabled embedding (errors 101/150) are skipped automatically when more than one track is configured.
+
+**Artists for a new track:** add the video ID to `tracks` in `artists.js` with its artists' slugs, main artist first (e.g. `"VIDEO_ID": ["dr-dre", "jill-scott"]`). If an artist is new, add an entry to `artists` (`name` plus a short original `bio`). The panel counts tracks automatically. Artists with no tracks are hidden, and a track with no entry just has no artist line.
+
+**Cache-busting:** `index.html` loads its CSS and scripts with `?v=<timestamp>`. Bump that value whenever you change `styles.css`, `playlist.js`, `track-meta.js`, `artists.js`, `app.js` or `ratings.js`.
+
+## Page layout
+- **Wide desktop (1200px and up):** three columns. On the left is the Artists panel (sticky, scrolls on its own). In the middle are the player, the current track's note, the queue, the below-queue ad and a collapsed "All track notes" section. On the right are the 300×250 ad and the About text.
+- **Narrower screens:** the Artists panel becomes a collapsible section right below the current track's note. It starts closed. The sidebar moves under the main column once the screen is narrower than 1000px.
+- **Artists panel:** clicking an artist highlights all of their tracks in the queue and plays their next one. Clicking again moves on to their following track, and "Clear highlight" removes the highlight. Artists on the current track get a ▶.
+- **Track note:** the "About this track" card sits directly under the player and Now Playing panel. It updates on every track change (auto-advance, next/prev, shuffle, queue or artist clicks).
+- **Ads:** nothing is ever placed over the player. If the middle column is narrower than 728px, the below-queue slot switches from 728×90 to 300×250, so it never overflows.
 
 ## Change the station name / logo
 In `playlist.js` → `station`: `name`, `tagline`, `logoText` (badge letters), or `logoImage` (e.g. `assets/logo.png`). The `about` array holds the About-the-station paragraphs. The current tagline and About text are placeholders marked `EDITABLE`. The page `<title>` and the static header text in `index.html`/`privacy.html` also say "Hardcore", and so do the footer and the logo initials ("HC"). Update those too, for SEO and for visitors without JS.
@@ -177,3 +189,11 @@ Google may limit ads on pages with this kind of content.
 - "theres no such thing as terrorism."
 
 The lyrics never say outright that the shooting was faked. Even so, the station's rules treat this as mass-shooting hoax content. Blake can override that decision.
+
+## Artist bio sources
+The bios in `artists.js` are original paraphrase of the sources below. Where little is verifiable (Compton AV, Steve Grant), the bio is kept short and sticks to what the sources say.
+- **Wikipedia** (lead sections): Dr. Dre, Jon Connor, Anderson .Paak, King Mez (Mez), Jill Scott (singer), Immortal Technique, Swollen Members, Vinnie Paz, Jedi Mind Tricks, Army of the Pharaohs, Xzibit, Aesop Rock, Rage Against the Machine, G-Unit, Snowgoons, PMD (rapper), EPMD, Butch Cassidy (rapper), Canon (rapper), Tom MacDonald (rapper), Pete & Bas, Beg for Mercy (Butch Cassidy on "Groupie Love"), Kingmaker (Xzibit album).
+- **Justus:** NPR, "Dr. Dre's 'Compton': Who Are The Album's New Artists?" (Aug 4, 2015): https://www.npr.org/sections/therecord/2015/08/04/429341486/ · Central Track, "Time of Dre." (Garland, formerly Love, JT; three Compton features): https://www.centraltrack.com/time-of-dre/ · NME feature on the Compton collaborators (The D.O.C. introduction; King Mez, Justus and .Paak as key writers).
+- **Compton AV / Kingmaker:** xzibit.com bio (Kingmaker as a platform for new talent like Compton AV): https://xzibit.com/bio/ · Chad Kiser, Jan 31, 2025 (Greenback Records, owned by Conor McGregor).
+- **Pete & Bas:** BBC News, "Pete & Bas: The grandfathers of UK drill" (2021).
+- **Steve Grant, Poison Pen, K-Rino, Genocide, The Goondox:** the same sources listed under "Track note sources" above (SkyMinds, the Durty Mics credits in the video descriptions, AllMusic, Artisan News, Murder Dog, Last.fm, the Genocide/Terrorize Records site, Reel Wolf).

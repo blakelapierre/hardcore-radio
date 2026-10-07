@@ -118,6 +118,49 @@ a { color: #ff8fa3; }
 .track-notes p, .about p { margin: 0 0 10px; color: #c8cede; }
 .track-notes article.current h3::before { content: "▶ "; color: var(--accent); }
 
+/* Current track note (under the player) */
+.now-note h2 { margin-bottom: 6px; }
+.now-artists { margin: 0 0 8px; color: var(--accent); font-size: .85rem; font-weight: 600; }
+.now-note-text { margin: 0; color: #c8cede; }
+
+/* Collapsible cards (<details>) */
+details.card > summary { list-style: none; cursor: pointer; display: flex; align-items: center; }
+details.card > summary::-webkit-details-marker { display: none; }
+details.card > summary h2 { margin: 0; flex: 1; }
+details.card > summary::after { content: "▾"; color: var(--muted); font-size: .9rem; transition: transform .2s; }
+details.card:not([open]) > summary::after { transform: rotate(-90deg); }
+details.card[open] > summary { margin-bottom: 12px; }
+.all-notes .track-notes { max-height: none; overflow: visible; }
+
+/* Artists panel */
+.artist-col { position: sticky; top: 96px; min-width: 0; display: none; }
+.artist-col .artists > summary { cursor: default; }
+.artist-col .artists > summary::after { display: none; }
+.artists-hint { margin: 0 0 10px; color: var(--muted); font-size: .8rem; }
+.artists-clear { margin: 0 0 10px; font: inherit; font-size: .8rem; color: var(--text); background: var(--bg-2); border: 1px solid var(--line);
+  border-radius: 999px; padding: 4px 12px; cursor: pointer; }
+.artists-clear:hover { border-color: #3a4357; }
+.artist-list { list-style: none; margin: 0; padding: 0 4px 0 0; display: flex; flex-direction: column; gap: 6px; }
+.artist-col .artist-list { max-height: calc(100vh - 230px); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #3a4357 transparent; }
+#artists-slot .artist-list { max-height: 420px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #3a4357 transparent; }
+.artist { width: 100%; display: flex; flex-direction: column; gap: 4px; text-align: left; padding: 10px; border-radius: 10px;
+  border: 1px solid transparent; background: transparent; color: inherit; font: inherit; cursor: pointer; }
+.artist:hover { background: var(--bg-2); border-color: var(--line); }
+.artist[aria-pressed="true"] { background: rgba(124,92,255,.12); border-color: rgba(124,92,255,.5); }
+.artist-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.artist-name { font-weight: 700; }
+.artist.on-air .artist-name::before { content: "▶ "; color: var(--accent); font-size: .8em; }
+.artist-count { color: var(--muted); font-size: .78rem; flex: none; font-variant-numeric: tabular-nums; }
+.artist-bio { color: #b4bccd; font-size: .84rem; line-height: 1.45; }
+.queue li.artist-match button { border-color: rgba(124,92,255,.55); box-shadow: inset 3px 0 0 var(--accent-2); }
+
+/* Three columns on wide desktop: artists | player + queue | ad + about */
+@media (min-width: 1200px) {
+  :root { --max: 1520px; }
+  .layout { grid-template-columns: 280px minmax(0, 1fr) 300px; }
+  .artist-col { display: block; }
+}
+
 /* Footer */
 .site-footer { border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; padding: 18px 0 28px; }
 .site-footer p { margin: 4px 0; }
@@ -174,3 +217,12 @@ a { color: #ff8fa3; }
 .queue::-webkit-scrollbar-thumb, .track-notes::-webkit-scrollbar-thumb { background: #3a4357; border-radius: 6px; }
 .queue-count { color: var(--muted); font-weight: 400; font-size: .85rem; margin-left: 6px; }
 @media (max-width: 760px) { .queue { max-height: 360px; } .track-notes { max-height: 420px; } }
+
+/* Ad row inside the main column: if the column is narrower than 728px, use the 300x250 unit instead. */
+.main-col { container-type: inline-size; container-name: maincol; }
+.main-col > .ad-row { width: 100%; }
+@container maincol (max-width: 727px) {
+  .ad-row .ad-desktop { display: none; }
+  .ad-row .ad-mobile { display: flex; }
+}
+.np-meta { flex: 1 1 0; }
