@@ -126,5 +126,54 @@ The notes in `playlist.js` are original paraphrase. They quote at most a few wor
   - Last.fm bio and album page (29 tracks, about two hours).
   - Apple Music listing (℗ 2010 Black Book International/SoSouth).
   - Murder Dog interview (South Park Coalition history, comic-book plans): https://murderdog.com/k-rino/
+- **Conspiracy Of Silence (Genocide ft. Vinnie Paz):**
+  - Junior Makhno Bandcamp, Classified Intelligence (track 2, all beats by Makhno, free re-release June 22, 2013): https://juniormakhno.bandcamp.com/album/classified-intelligence
+  - Genocide / Terrorize Records site (Zvornik, Bosnia; New Zealand base; Debt Collectors; Classified Intelligence on iTunes): https://genociderap.wordpress.com/
+  - Underground Hardcore Rap blog (re-release notice): http://undergroundhardcorerap.blogspot.com/2013/07/genocide-jr-makhno-classified.html
+  - Lyrics.lol, used for screening: https://lyrics.lol/artist/319-Vinnie-Paz/lyrics/1025609-Conspiracy-Of-Silence
+- **The Government (Tom MacDonald):**
+  - Wikipedia, "Tom MacDonald (rapper)": Edmonton-born, former wrestler, self-released, "MAGA rap" label: https://en.wikipedia.org/wiki/Tom_MacDonald_(rapper)
+  - Apple Music and Album of the Year single listings (Sept 4, 2026): https://www.albumoftheyear.org/album/2014152-tom-macdonald-the-government.php
+  - LyricsFA, used for screening: https://lyricsfa.com/tom-macdonald-the-government-lyrics/
+- **Drums On The Wheel (Aesop Rock):**
+  - Rhymesayers YouTube description (video credits, Grimace Federation, released Apr 7, 2020).
+  - Aesop Rock Bandcamp, Music From The Game Freedom Finger (lyrics, track list): https://aesoprock.bandcamp.com/album/music-from-the-game-freedom-finger
+  - Rhymesayers news post and Steam soundtrack page (Wide Right Interactive).
+- **Shut Yo Mouth (Xzibit ft. Compton AV & Butch Cassidy):**
+  - Chad Kiser, Feb 7, 2025 (DJ Battlecat history, Kingmaker singles): https://chadkiser.com/2025/02/07/xzibit-drops-dj-battlecat-produced-shut-yo-mouth-featuring-compton-av-butch-cassidy/
+  - Chad Kiser, Feb 10, 2025 (video director Alexey Figurov).
+  - Wasted Attitude (Greenback Records; first album since Napalm).
+  - Wikipedia and xzibit.com, Kingmaker (May 16, 2025).
+  - azlyrics.biz, used for screening: https://azlyrics.biz/x/xzibit-lyrics/xzibit-shut-yo-mouth-lyrics/
+- **Terrorstorm (Army of the Pharaohs):**
+  - Wikipedia, "Heavy Lies the Crown (album)": single date Oct 7, 2014; album Oct 21, 2014; Enemy Soil; producer C-Lance; fifth album: https://en.wikipedia.org/wiki/Heavy_Lies_the_Crown_(album)
+  - downloadmp3flac lyrics and credits, used for screening: https://downloadmp3flac.com/songs/terrorstorm-by-army-of-the-pharaohs
+- **Cross Country (Pete & Bas):**
+  - Wikipedia, "Pete & Bas": members, 2017 debut, Mugshot, T-Pain remix, Sindhuworld label: https://en.wikipedia.org/wiki/Pete_%26_Bas
+  - BBC News, "Pete & Bas: The grandfathers of UK drill" (2021).
+  - Spotify single listing (June 15, 2026).
+  - lirikcinta lyrics, used for screening: https://www.lirikcinta.com/p/pete-bas/cross-country-pete-bas/
+- **Sleep Now in the Fire (Rage Against the Machine):**
+  - Wikipedia, "Sleep Now in the Fire": single date, Michael Moore video, Jan 26, 2000 shoot, Morello quote, Gary Bauer clip: https://en.wikipedia.org/wiki/Sleep_Now_in_the_Fire
+- **Round Em Up (Canon):**
+  - Cross Rhythms, Nov 2, 2017 (Reflection Music Group, Chicago, label statement): https://www.crossrhythms.co.uk/articles/news/Round_Em_Up/61467/p1/
+  - NewReleaseToday and Trackstarz (Oct 2017 release, Sessions Tour).
+  - Lyricshare, used for screening: https://lyricshare.net/en/canon/round-em-up.html
+- **G-Unit (G-Unit):**
+  - Wikipedia, "Beg for Mercy": track 1, Hi-Tek, Triumvirat sample, release date, Tony Yayo, charts and certifications: https://en.wikipedia.org/wiki/Beg_for_Mercy
+  - Genius lyrics and credits, used for screening: https://genius.com/G-unit-g-unit-lyrics
 
-**Lyric screening (Oct 2026):** none of the six tracks contains Holocaust denial, antisemitic conspiracy claims or mass-shooting hoax claims. Heads-up for ad suitability: the Dr. Dre and Goondox tracks have heavy profanity, and "Raps Of The Titans" includes homophobic and ableist slurs in some guest verses. Google can limit or block ads on pages with that kind of content.
+**Lyric screening (Oct 2026):** none of the 15 tracks on the station contains Holocaust denial, antisemitic conspiracy claims or mass-shooting hoax claims. Ad-suitability notes:
+- Heavy profanity in the Dr. Dre, Goondox, Xzibit, Army of the Pharaohs and G-Unit tracks, plus slurs in some of them: homophobic and ableist lines in some "Raps Of The Titans" guest verses, and an ableist slur and a homophobic jab in "Terrorstorm." Graphic gun violence in "G-Unit."
+- "Conspiracy Of Silence" presents 9/11 and the USS Cole as false-flag attacks and calls itself "Taliban rap" (these are the artists' claims). It also has a vague "state within a state" line with no group named.
+- "The Government" includes the artist's claims that Hollywood is full of devil-worshipping pedophiles, doubts about the Moon landing, and swipes at Pride and at mosques replacing churches.
+- "Cross Country" has mild crude humor.
+
+Google may limit ads on pages with this kind of content.
+
+**Held back: `luLmaqcD6yE` Steve Grant – Greetings Citizens (Anonymous Live).** The video is embeddable (oEmbed 200), but the lyrics Steve Grant publishes in its YouTube description push Sandy Hook conspiracy claims. The text was re-checked in Oct 2026 against Wayback Machine snapshots from 2016, 2019 and 2024, which are identical. The lines are:
+- "Sandy Hook camera footage yea its still missing and while you over there popping mollies they kill children." This is the "missing footage" talking point that hoax promoters use to argue the shooting was staged.
+- "the plans to have us looking like James Holmes and Adam Lanza." This casts the Aurora and Sandy Hook shooters as products of a deliberate plan.
+- "theres no such thing as terrorism."
+
+The lyrics never say outright that the shooting was faked. Even so, the station's rules treat this as mass-shooting hoax content. Blake can override that decision.

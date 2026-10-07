@@ -78,6 +78,78 @@ window.STATION_CONFIG = {
       notes:
         "K-Rino is a Houston underground pioneer from the South Park neighborhood. He started rapping in 1983 and founded the South Park Coalition crew in 1987. He has stayed independent his whole career, releasing his music on his own Black Book International label. This is the title track of his 2010 double album Annihilation of the Evil Machine (29 tracks, about two hours), produced by 5-7 Red. It's six minutes of sci-fi storytelling. A mystic and two visitors tell K-Rino he was chosen to destroy a machine that pumps lies into the masses through governments, media and the airwaves. He battles a robot with a screen for a head and blows it up, only to watch it split into countless offspring. K-Rino has said a comic-book version of the story is in the works. This video is a fan-made upload, not an official one.",
     },
+    {
+      id: "AW77gFdSALE",
+      title: "",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "Genocide (Geno) is a Bosnian-born MC from Zvornik who built his career in New Zealand, where he also raps with the crew Debt Collectors. This is track 2 of Classified Intelligence, his album with producer Junior Makhno, who made every beat. It first came out around 2011 and was re-released free on Bandcamp in June 2013. Genocide's verse sets out his view of a corrupt, money-driven government that hides behind surveillance and false-flag attacks, and he calls listeners to resist. Jedi Mind Tricks' Vinnie Paz takes the second verse, aiming his usual fire at presidents, the pope and the CIA. The hook casts the pair as urban-warfare \"enemies of the state.\"",
+    },
+    {
+      id: "ZP6lxNdNTQQ",
+      title: "",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "Tom MacDonald is an Edmonton-born rapper and former pro wrestler who releases everything himself. His political songs have made him one of the best-known names in what critics call \"MAGA rap.\" He put out \"The Government\" as a standalone single on September 4, 2026. The song is a list of what he says he no longer trusts: both parties, the news, schools, doctors, banks, judges, screens and AI. In his telling, the left-right fight is a show that keeps ordinary people divided, broke and distracted. The verses also go after pride culture and \"woke\" politics and mention Charlie Kirk's killing. Those views are the artist's own.",
+    },
+    {
+      id: "N1iUN-J-lSs",
+      title: "",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "Aesop Rock wrote and produced this song for Freedom Finger, a video game by Wide Right Interactive. Rhymesayers released it in April 2020 as one of three vocal tracks on the game's soundtrack EP. The narrator is a stranded pilot calling \"do you read me\" into deep space while he drifts past dead stars and his beacon blinks out. It's a shoot-'em-up story that doubles as a picture of feeling cut off from everyone. Grimace Federation added extra instrumentation. The animated video was directed by Jim Dirschberger, with illustrations by Travis Millard and animation by Steven Gong.",
+    },
+    {
+      id: "tauuueQvTf0",
+      title: "",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "\"Shut Yo Mouth\" came out on February 7, 2025, through Greenback Records, ahead of Kingmaker (May 2025), Xzibit's first studio album since 2012's Napalm. It reunites him with producer DJ Battlecat, his partner on West Coast staples like \"Been a Long Time\" and \"Get Yo Walk On\" from Restless (2000). Compton AV opens by mocking livestream clout-chasers and gossip blogs. X follows with a verse announcing that the West is back. Butch Cassidy sings the hook, telling critics to keep his name out of their mouths. Alexey Figurov directed the video.",
+    },
+    {
+      id: "VMXUvaaDdwo",
+      title: "",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "Army of the Pharaohs is the hardcore hip-hop collective built around Jedi Mind Tricks' Vinnie Paz. \"Terrorstorm\" was the lead single, released October 7, 2014, from Heavy Lies the Crown. That was their fifth album and their second of 2014, out October 21 on Enemy Soil. C-Lance produced the track. Seven MCs pass the mic: Vinnie Paz, Celph Titled, Block McCloud (who also sings the \"we just fight\" hook), Reef the Lost Cauze, Esoteric, Crypt the Warchild and Apathy, with a Bruce Lee line from Enter the Dragon in the middle. There's no story here, only battle-rap bravado, five minutes of it.",
+    },
+    {
+      id: "91cYRcgu548",
+      title: "",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "Pete & Bas are Peter Bowditch and Basil Bellgrave, two South Londoners in their seventies. They went viral with \"Shut Ya Mouth\" in 2017 and have since become UK drill's unlikeliest stars, with European tours, a T-Pain remix and the 2024 album Mugshot. \"Cross Country,\" released June 15, 2026, is a tongue-in-cheek travelogue. They greet the locals and order drinks from Spain and Saudi Arabia to Doha, Bangkok, Tokyo, Miami, Prague and Lisbon, piling on jewellery runs and boat parties, then call themselves a \"couple of old blokes\" who did it all themselves. The video is on the channel of Sindhu World, their label.",
+    },
+    {
+      id: "kl4wkIPiTcY",
+      title: "",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "Rage Against the Machine released \"Sleep Now in the Fire\" in April 2000 as the second single from The Battle of Los Angeles (1999). Zack de la Rocha's lyrics trace greed through American history, from Columbus's ships to the Enola Gay. Michael Moore directed the video on January 26, 2000, and the band played outside the New York Stock Exchange without a street permit. Police led Moore away. Tom Morello said about 200 people got through the Exchange's first doors before its riot doors came down. The clip also spoofs Who Wants to Be a Millionaire, and it ends with politician Gary Bauer calling the band \"pro-terrorist.\"",
+    },
+    {
+      id: "sjNLqGSt7dA",
+      title: "",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "Canon is a Chicago rapper signed to Reflection Music Group. \"Round Em Up\" came out as a digital single in late October 2017, and he promoted it on his Sessions Tour. The label described it as a call for people of every race and status, all equal in God's eyes, to unite. On the chant-like hook, he sends the \"wild boys\" and \"wild girls\" out to gather disciples on the corner. In the verses, Canon refuses to write off street kids as thugs or criminals and says everyone needs grace and a second chance. He urges believers to lead by example instead of settling for a religious image.",
+    },
+    {
+      id: "aMmkNDwnl68",
+      title: "G-Unit - G-Unit (Album Version)",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "This is the title track that opens Beg for Mercy, G-Unit's debut album. It came out November 14, 2003, the same day as Jay-Z's The Black Album. Hi-Tek produced it around a sample of Triumvirat's \"Million Dollars.\" After 50 Cent's roll call, Young Buck delivers a menacing verse that shouts out Shady/Aftermath and Interscope, and Lloyd Banks follows with tour-bus bravado. The fourth member, Tony Yayo, was in jail during recording and appears on only two album tracks, neither of them this one. Beg for Mercy debuted at No. 3 on the Billboard 200, peaked at No. 2 and went double platinum.",
+    },
   ],
 
   // Track notes for "playlist" mode, keyed by video ID (optional).

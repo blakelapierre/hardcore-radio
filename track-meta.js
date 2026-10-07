@@ -29,5 +29,50 @@ window.TRACK_META = {
     "title": "K-Rino - Annihilation of the Evil Machine (Video)",
     "channel": "TCC",
     "channelUrl": "https://www.youtube.com/@TheColorfulCube"
+  },
+  "AW77gFdSALE": {
+    "title": "Genocide Ft. Vinnie Paz - Conspiracy Of Silence [Prod By: Junior Makhno]",
+    "channel": "GenocideRap",
+    "channelUrl": "https://www.youtube.com/@GenocideRap"
+  },
+  "ZP6lxNdNTQQ": {
+    "title": "Tom MacDonald - \"The Government\"",
+    "channel": "Tom MacDonald",
+    "channelUrl": "https://www.youtube.com/@TomMacDonaldOfficial"
+  },
+  "N1iUN-J-lSs": {
+    "title": "Aesop Rock - Drums On The Wheel (Official Video)",
+    "channel": "Rhymesayers Entertainment",
+    "channelUrl": "https://www.youtube.com/@rhymesayers"
+  },
+  "tauuueQvTf0": {
+    "title": "Xzibit - Shut Yo Mouth ft. Compton AV & Butch Cassidy (Official Video)",
+    "channel": "Xzibit",
+    "channelUrl": "https://www.youtube.com/@xzibit"
+  },
+  "VMXUvaaDdwo": {
+    "title": "Army of the Pharaohs \"Terrorstorm\" - Official Video",
+    "channel": "Vinnie Paz",
+    "channelUrl": "https://www.youtube.com/@jmthiphop"
+  },
+  "91cYRcgu548": {
+    "title": "Pete & Bas - Cross Country",
+    "channel": "Sindhu World",
+    "channelUrl": "https://www.youtube.com/@sindhuworld"
+  },
+  "kl4wkIPiTcY": {
+    "title": "Rage Against The Machine - Sleep Now in the Fire (Official HD Video)",
+    "channel": "RATMVEVO",
+    "channelUrl": "https://www.youtube.com/@RATMVEVO"
+  },
+  "sjNLqGSt7dA": {
+    "title": "Canon - Round Em Up (Official Audio)",
+    "channel": "Reflectionmusicgroup",
+    "channelUrl": "https://www.youtube.com/@Reflectionmusicgroup"
+  },
+  "aMmkNDwnl68": {
+    "title": "G-Unit (Album Version (Explicit))",
+    "channel": "G-Unit - Topic",
+    "channelUrl": "https://www.youtube.com/channel/UCOqyGxp8d02g2pOUEwU4-Rw"
   }
 };
