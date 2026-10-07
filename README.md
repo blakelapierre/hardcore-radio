@@ -110,24 +110,21 @@ It's plain static files with no build step (apart from the optional `fetch_title
 The notes in `playlist.js` are original paraphrase. They quote at most a few words of lyrics, and the political themes are described as the artists' message, not as the station's claims.
 - **The Seventh Seal (Steve Grant):** SkyMinds, "Steve Grant – The Seventh Seal" (credits, and filming at the Million Mask March outside the White House on 5 Nov 2013): https://www.skyminds.net/steve-grant-seventh-seal/ · Wikipedia, "Million Mask March": https://en.wikipedia.org/wiki/Million_Mask_March · the video itself (lyrics and themes).
 - **The 2nd Ammendment (Poison Pen feat. Immortal Technique):** the YouTube "Provided to YouTube by K7 Records" description (The Money Shot, ℗ 2009 Gold Dust Media, writers L. Herron / F. Coronel / T. Underdue) · AllMusic Poison Pen bio and The Money Shot credits: https://www.allmusic.com/artist/poison-pen-mn0000355277 · Artisan News (2007, Stronghold and Bed-Stuy): https://artisannewsservice.com/poison-pen-set-to-release-debut/ · OneTwoOneTwo (2007 press bio): https://www.onetwoonetwo.com/immortal-technique-presentspoison-pen-pick-your-poison/ · Genius lyrics: https://genius.com/Poison-pen-2nd-amendment-lyrics · Wikipedia, "Immortal Technique" · album reviews: RapManiacZ and Lyrics First (2009).
+- **For The Love Of Money and Talk About It (Dr. Dre, *Compton*):**
+  - The YouTube "Provided to YouTube by Universal Music Group" description (℗ 2015 Aftermath/Interscope, producer Cardiak, writer credits).
+  - The lyric video text on DrDreVEVO, used for screening.
+  - Genius pages for "For the Love of Money" (lyrics, samples, credits): https://genius.com/Dr-dre-for-the-love-of-money-lyrics
+  - Wikipedia, "Compton (album)": release dates, origin in the Straight Outta Compton film, debut at No. 2 with 295,000 units.
+- **Raps Of The Titans (The Goondox):**
+  - The Snowgoons YouTube description (guest list, video credits).
+  - Reel Wolf Productions video page (group line-up, beat, chorus and title credits): https://www.reelwolf.com/the-goondox-raps-of-the-titans-pmdsean-strangeswollen-memberssnowgoonsjus-allah-more.html
+  - AllMusic song credits.
+  - Lyrks lyrics page, used for screening (album Welcome to the Goondox, 2012).
+- **Annihilation of the Evil Machine (K-Rino):**
+  - The TCC YouTube description (fan-made video; track 2, disc 1, 2010).
+  - Genius lyrics and credits (producer 5-7 Red, released Aug 23, 2010): https://genius.com/K-rino-annihilation-of-the-evil-machine-lyrics
+  - Last.fm bio and album page (29 tracks, about two hours).
+  - Apple Music listing (℗ 2010 Black Book International/SoSouth).
+  - Murder Dog interview (South Park Coalition history, comic-book plans): https://murderdog.com/k-rino/
 
-### Tracks added from YouTube Mix RDfwqSqLRPe0g (snapshot taken 2026-10-02)
-YouTube Mixes (`RD…`) are generated per viewer and can't be read through the Data API. To build this list, I took the first 50 entries that `yt-dlp --flat-playlist` returned for `watch?v=fwqSqLRPe0g&list=RDfwqSqLRPe0g`. Every entry was checked with oEmbed (HTTP 200) and with yt-dlp's `playable_in_embed`. All were embeddable music videos under 8 minutes long. 43 were added and 7 were left out:
-- **Duplicates:** `dnhqZcG0tew` (already on the station) and `8ylaXlXZDy0` (a 2015 upload of Steve Grant's "Never Forget"; the 2018 video `aKzBEahGgb8` is used instead).
-- **Held for review because of content:** the lyrics these artists publish in their own video descriptions contain Holocaust denial, antisemitic "Rothschild/Zionist control" conspiracy claims, or claims that the Sandy Hook shooting was faked. That kind of content conflicts with Google's AdSense and publisher content policies. Blake can decide whether to add them.
-  - `reeIi95qiVI` Steve Grant – MULTIVERSE
-  - `xn3qS7opSjE` Steve Grant – Murder The Mainstream
-  - `4yuyHzXmT8s` Steve Grant – Aphotic Echo
-  - `7_4uKCyPmPk` Steve Grant & Atom Warlok – Watchmen
-  - `luLmaqcD6yE` Steve Grant – Greetings Citizens
-- **Screening limits:** only lyrics published in the video descriptions were checked. Tracks without published lyrics (most of the ODD TV, DISL Automatic, CRUCIFIX, Anilyst and Lost Children of Babylon tracks) were not screened, so listen through them before relying on them.
-
-**Sources for the new notes:**
-- Each video's own YouTube description (credits, release dates, album and track numbers, published lyrics), read with yt-dlp.
-- Alais Clay: official bio at https://www.alaisclay.live/; Bandcamp pages for End of an Era and Reverse Hypnosis (https://alaisclay.bandcamp.com/).
-- DISL Automatic: https://getbigonem.com/; "Can You Handle The Truth...In Music? Vol.10" (Odysee, 2022).
-- Drezus: Wikipedia; National Arts Centre bio (https://nac-cna.ca/en/bio/drezus); Studio Bell (https://www.studiobell.ca/drezus); ICT News (Indigenous Music Awards coverage); UGSMAG ("Get Up!" as the first single from Public Enemy).
-- The Lost Children of Babylon: Wikipedia ("Zeitgeist: The Spirit of the Age"); Chambermusik product page; https://lostchildrenofbabylon.com/about/.
-- Payday Monsanto: the CD Baby/YouTube "Provided to YouTube" description; maniadb (Missiles With Relish, 2013).
-- Anilyst: the Apple Music listing for the "Triple Threat" single (Jan 30, 2012).
-- General background: Martin Luther King Jr.'s "Letter from Birmingham Jail" (Silence of the Good People); news coverage of the June 21, 2021 Arvada, Colorado shooting (Johnny Hurley).
+**Lyric screening (Oct 2026):** none of the six tracks contains Holocaust denial, antisemitic conspiracy claims or mass-shooting hoax claims. Heads-up for ad suitability: the Dr. Dre and Goondox tracks have heavy profanity, and "Raps Of The Titans" includes homophobic and ableist slurs in some guest verses. Google can limit or block ads on pages with that kind of content.

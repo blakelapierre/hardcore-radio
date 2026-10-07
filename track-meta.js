@@ -10,219 +10,24 @@ window.TRACK_META = {
     "channel": "Poison Pen - Topic",
     "channelUrl": "https://www.youtube.com/channel/UCQ81HlRNBAtB3ZyaVAtz_gg"
   },
-  "fwqSqLRPe0g": {
-    "title": "Alais Clay - Cut The Ties feat. GhostRyder & Steve Grant (w/ LYRICS!!)",
-    "channel": "Alais Clay",
-    "channelUrl": "https://www.youtube.com/@AlaisClay"
+  "ZbiMp6VqYYg": {
+    "title": "For The Love Of Money",
+    "channel": "Dr. Dre - Topic",
+    "channelUrl": "https://www.youtube.com/channel/UC1g7JmTw4Gv8W9YINg3M1FA"
   },
-  "azOvjLmbd4s": {
-    "title": "Alais Clay - 'Propaganda Overload'  Official Video",
-    "channel": "Alais Clay",
-    "channelUrl": "https://www.youtube.com/@AlaisClay"
+  "T9CHWOsGrx0": {
+    "title": "Dr. Dre - Talk About It (Lyric Video) ft. King Mez, Justus",
+    "channel": "DrDreVEVO",
+    "channelUrl": "https://www.youtube.com/@DrDreVEVO"
   },
-  "UBV-avF9P-E": {
-    "title": "Alais Clay - Coals Into Diamonds",
-    "channel": "Alais Clay",
-    "channelUrl": "https://www.youtube.com/@AlaisClay"
+  "DiWM-f1uRQg": {
+    "title": "Goondox (PMD & Sean Strange) - Raps Of The Titans ft Swollen Members & more (Prod by Snowgoons)",
+    "channel": "Snowgoons",
+    "channelUrl": "https://www.youtube.com/@snowgoons"
   },
-  "OvouxUrZbRo": {
-    "title": "Pain R.I.P. -  Alais Clay",
-    "channel": "Alais Clay",
-    "channelUrl": "https://www.youtube.com/@AlaisClay"
-  },
-  "L9kBJrGA6wI": {
-    "title": "Alais Clay Ft. Steve Grant - Empire",
-    "channel": "Steve Grant",
-    "channelUrl": "https://www.youtube.com/@stevegrant8805"
-  },
-  "u7SfFRQjMFY": {
-    "title": "ODD TV | They Live, We Sleep ( feat. Payday Monsanto ) Song ▶️️",
-    "channel": "ODD TV",
-    "channelUrl": "https://www.youtube.com/@Truthavision"
-  },
-  "_PdigNCB--g": {
-    "title": "Come Together Now - Alais Clay + DISL Automatic",
-    "channel": "Alais Clay",
-    "channelUrl": "https://www.youtube.com/@AlaisClay"
-  },
-  "5Q6oqPuzA5k": {
-    "title": "Alais Clay - Renegade Slave",
-    "channel": "Alais Clay",
-    "channelUrl": "https://www.youtube.com/@AlaisClay"
-  },
-  "YNpR4TjVPtc": {
-    "title": "Alais Clay - Deadly Rain [Official Video]",
-    "channel": "Alais Clay",
-    "channelUrl": "https://www.youtube.com/@AlaisClay"
-  },
-  "2rz7Sh_qDq8": {
-    "title": "Steve Grant - Silence of the Good People",
-    "channel": "Steve Grant",
-    "channelUrl": "https://www.youtube.com/@stevegrant8805"
-  },
-  "aKzBEahGgb8": {
-    "title": "Steve Grant -  NEVER FORGET",
-    "channel": "Steve Grant",
-    "channelUrl": "https://www.youtube.com/@stevegrant8805"
-  },
-  "sAWG5rdS5D8": {
-    "title": "DISL AUTOMATIC - EYES WIDE OPEN (PROD. BY VeCITY)",
-    "channel": "GlobalFaction",
-    "channelUrl": "https://www.youtube.com/@Globalfaction"
-  },
-  "jUAzGRh6eQ4": {
-    "title": "DISL AUTOMATIC - IT AIN'T OVER TIL IT'S OVER (OFFICIAL MUSIC VIDEO)",
-    "channel": "GlobalFaction",
-    "channelUrl": "https://www.youtube.com/@Globalfaction"
-  },
-  "MRMXifWfHVg": {
-    "title": "O.D.D TV | Doesn't Have to Be this Way (TRUTH MUSIC) ▶️️",
-    "channel": "ODD TV",
-    "channelUrl": "https://www.youtube.com/@Truthavision"
-  },
-  "bab_07mBKqI": {
-    "title": "Alais Clay  -  'In The Light'",
-    "channel": "Alais Clay",
-    "channelUrl": "https://www.youtube.com/@AlaisClay"
-  },
-  "M3Wh1mNdTJY": {
-    "title": "Alais Clay - 'Message' (with lyrics)",
-    "channel": "Alais Clay",
-    "channelUrl": "https://www.youtube.com/@AlaisClay"
-  },
-  "Cxk0YaN8lWc": {
-    "title": "Steve Grant - Who's Afraid",
-    "channel": "Steve Grant",
-    "channelUrl": "https://www.youtube.com/@stevegrant8805"
-  },
-  "MN708_EhVNM": {
-    "title": "Steve Grant - Riot (March Against Monsanto Miami 2014)",
-    "channel": "Steve Grant",
-    "channelUrl": "https://www.youtube.com/@stevegrant8805"
-  },
-  "tCWravEFb5U": {
-    "title": "We Do Not Consent | By Mr Matty Moses (feat O.D.D TV) ANTHEM ▶️️",
-    "channel": "ODD TV",
-    "channelUrl": "https://www.youtube.com/@Truthavision"
-  },
-  "XYiGsNkJlHA": {
-    "title": "Wake Up - Alais Clay + Chances R Good",
-    "channel": "Alais Clay",
-    "channelUrl": "https://www.youtube.com/@AlaisClay"
-  },
-  "SvPlrwV6wl4": {
-    "title": "\"BURN BABYLON BURN\" (Official Music Video) by DISL Automatic",
-    "channel": "DISL Automatic",
-    "channelUrl": "https://www.youtube.com/@DISLautomatic"
-  },
-  "5mft2RfXjjw": {
-    "title": "DISL Automatic, Genocide & Beast 1333 - Unstoppable",
-    "channel": "DISL Automatic",
-    "channelUrl": "https://www.youtube.com/@DISLautomatic"
-  },
-  "HtyTBQ1PklM": {
-    "title": "Power Through People - ft. Steve Grant - HisStory",
-    "channel": "Power Through People",
-    "channelUrl": "https://www.youtube.com/@PowerThroughPeople"
-  },
-  "Q0ZMCsqDa8c": {
-    "title": "Steve Grant & Atom Warlok - Guy Fawkes",
-    "channel": "Steve Grant",
-    "channelUrl": "https://www.youtube.com/@stevegrant8805"
-  },
-  "v8R254Bno5I": {
-    "title": "Alais Clay - We Will March",
-    "channel": "Alais Clay",
-    "channelUrl": "https://www.youtube.com/@AlaisClay"
-  },
-  "vVmY0SVQ_ps": {
-    "title": "Stars Collide - Maiyu Ondaro & Alais Clay",
-    "channel": "Alais Clay",
-    "channelUrl": "https://www.youtube.com/@AlaisClay"
-  },
-  "VkASGroP-Ko": {
-    "title": "Alais Clay Neva Gonna Hush Us Feat. McAD",
-    "channel": "TheJedi47",
-    "channelUrl": "https://www.youtube.com/@TheJedi47"
-  },
-  "Ry9fvLSf6Hw": {
-    "title": "Stand Tall - Ghostryder feat. Steve Grant & D.I.S.L. Automatic",
-    "channel": "Steve Grant",
-    "channelUrl": "https://www.youtube.com/@stevegrant8805"
-  },
-  "5G0DBXvoT-Q": {
-    "title": "Enslaved | Anti Illuminati Music Video | ODD TV ▶️️",
-    "channel": "ODD TV",
-    "channelUrl": "https://www.youtube.com/@Truthavision"
-  },
-  "03V187Vu6Mg": {
-    "title": "Home to Roost  - Alais Clay + Freedom Movement feat. John Scarlata",
-    "channel": "Alais Clay",
-    "channelUrl": "https://www.youtube.com/@AlaisClay"
-  },
-  "j18nnjKK2_w": {
-    "title": "'The Legend of Johnny Hurley' [Official Video] - Alais Clay feat. Freedom Movement",
-    "channel": "Alais Clay",
-    "channelUrl": "https://www.youtube.com/@AlaisClay"
-  },
-  "ibHd0zBJ6ig": {
-    "title": "The Lost Children Of Babylon - Martial Law",
-    "channel": "DezFlight Underground",
-    "channelUrl": "https://www.youtube.com/@dezflight"
-  },
-  "uRGZIEPWCnc": {
-    "title": "TIME FOR A CHANGE - Power Through People - STEVE GRANT - ALAIS CLAY",
-    "channel": "Power Through People",
-    "channelUrl": "https://www.youtube.com/@PowerThroughPeople"
-  },
-  "lssYt05BO8I": {
-    "title": "DISL AUTOMATIC - THIS IS A DISS (OFFICIAL VIDEO. PRODUCED BY VeCITY)",
-    "channel": "GlobalFaction",
-    "channelUrl": "https://www.youtube.com/@Globalfaction"
-  },
-  "BhXZPcIZ6SM": {
-    "title": "Anilyst - Triple Threat (Video)",
-    "channel": "AnilystTV",
-    "channelUrl": "https://www.youtube.com/@AnilystTV"
-  },
-  "YBWzv2LZlNQ": {
-    "title": "\"With Honor\" by DISL Automatic & SinTheSis (Prod. by Anno Domini)",
-    "channel": "DISL Automatic",
-    "channelUrl": "https://www.youtube.com/@DISLautomatic"
-  },
-  "qCBYvrXNFR0": {
-    "title": "DISL AUTOMATIC, SINTHESIS & ASPIRIT - SYSTEM REBOOT (PROD. BY VECITY)",
-    "channel": "GlobalFaction",
-    "channelUrl": "https://www.youtube.com/@Globalfaction"
-  },
-  "7LTomMX3eWA": {
-    "title": "Steve Grant ft. Alais Clay, Heidi D and DISL Automatic - Rise Up",
-    "channel": "Steve Grant",
-    "channelUrl": "https://www.youtube.com/@stevegrant8805"
-  },
-  "s6ZpswGUZnY": {
-    "title": "CRUCIFIX - \"Been So Wrong\" Feat. Credit (Official Video)",
-    "channel": "CRUCIFIX",
-    "channelUrl": "https://www.youtube.com/@SaintCruce"
-  },
-  "9sq7m38KWmM": {
-    "title": "Rap Song Explaining the System and Why ALL Presidents are Puppets",
-    "channel": "DISL Automatic",
-    "channelUrl": "https://www.youtube.com/@DISLautomatic"
-  },
-  "oAiAdhv_6Hw": {
-    "title": "Gun Grabbers",
-    "channel": "Payday Monsanto - Topic",
-    "channelUrl": "https://www.youtube.com/channel/UCzk5aUeWHlARKxZ54RatDDw"
-  },
-  "lS8UfEe3N6o": {
-    "title": "Drezus - Get Up! (Official Video)",
-    "channel": "Drezus Music",
-    "channelUrl": "https://www.youtube.com/@DrezusMusic"
-  },
-  "GKnxsLDsfZ0": {
-    "title": "Power Through People / STEVE GRANT / DISL AUTOMATIC - TITANS",
-    "channel": "Power Through People",
-    "channelUrl": "https://www.youtube.com/@PowerThroughPeople"
+  "h8Rf24KdOBw": {
+    "title": "K-Rino - Annihilation of the Evil Machine (Video)",
+    "channel": "TCC",
+    "channelUrl": "https://www.youtube.com/@TheColorfulCube"
   }
 };
