@@ -7,7 +7,7 @@ A static "web radio" site that plays YouTube videos through the **official YouTu
 ```
 index.html        page layout: player, Now Playing, controls, queue, notes, about, ad slots
 styles.css        dark theme + responsive layout (desktop / tablet / mobile)
-app.js            player logic (IFrame API, queue, shuffle, auto-advance, volume)
+app.js            player logic (IFrame API, queue, Random mode, auto-advance, volume)
 ratings.js        thumbs up/down ratings (Firebase, loaded only when configured)
 firebase-config.js  ← paste your Firebase web config here (placeholders = ratings hidden)
 firestore.rules   Firestore security rules for ratings
@@ -55,10 +55,12 @@ If this step is skipped or fails, the site reads the title and channel from `pla
 **Cache-busting:** `index.html` loads its CSS and scripts with `?v=<timestamp>`. Bump that value whenever you change `styles.css`, `playlist.js`, `track-meta.js`, `artists.js`, `app.js` or `ratings.js`.
 
 ## Page layout
-- **Wide desktop (1200px and up):** three columns. On the left is the Artists panel (sticky, scrolls on its own). In the middle are the player, the current track's note, the queue, the below-queue ad and a collapsed "All track notes" section. On the right are the 300×250 ad and the About text.
-- **Narrower screens:** the Artists panel becomes a collapsible section right below the current track's note. It starts closed. The sidebar moves under the main column once the screen is narrower than 1000px.
-- **Artists panel:** clicking an artist highlights all of their tracks in the queue and plays their next one. Clicking again moves on to their following track, and "Clear highlight" removes the highlight. Artists on the current track get a ▶.
-- **Track note:** the "About this track" card sits directly under the player and Now Playing panel. It updates on every track change (auto-advance, next/prev, shuffle, queue or artist clicks).
+- **Wide desktop (1200px and up):** three columns. On the left is the Artists panel (sticky, scrolls on its own). In the middle are the player, the current track's note, the queue, the below-queue ad and a collapsed "All track notes" section. On the right are the 300×250 ad, the "On this track" card and the About text.
+- **Narrower screens:** the Artists panel becomes a collapsible section right below the current track's note. It starts closed. The sidebar moves under the main column once the screen is narrower than 1000px. At that point the "On this track" card moves (it isn't duplicated) to just under the track note.
+- **Artists panel:** compact rows showing "Name · track count", sorted by count (highest first) and then by name. Clicking a name opens its bio inline, accordion style, so only one bio is open at a time. Clicking it again closes it. The open bio has two buttons. "▶ Play" plays that artist's next track (in Random mode, the next one in the upcoming order). "Highlight tracks" outlines all their tracks in the queue. "Clear highlight" removes the highlight. Artists on the current track get a ▶. The names are real buttons with `aria-expanded`, so they work with the keyboard (Tab, Enter or Space).
+- **On this track:** a card that lists every artist on the current track, main artist first, then featured artists. Each entry shows the name, the track count and the full bio. It updates on every track change.
+- **Track note:** the "About this track" card sits directly under the player and Now Playing panel. It updates on every track change (auto-advance, next/prev, queue or artist clicks).
+- **Random mode:** the "Random" button (keyboard shortcut R) has an On/Off badge and `aria-pressed`. When it's on, every Next and every auto-advance picks a track that hasn't played yet in the current cycle. Once all tracks have played, a new random cycle starts, and it never starts with the track that just played, so no track plays twice in a row. Prev goes back through what actually played, and Next then steps forward through that history again. "Up next" shows the real upcoming order, with a divider where the next cycle starts. Picking a track from the queue or an artist counts it as played in the current cycle. The setting is saved in localStorage (`hc-random`). If it's on when the page loads, playback starts on a random track.
 - **Ads:** nothing is ever placed over the player. If the middle column is narrower than 728px, the below-queue slot switches from 728×90 to 300×250, so it never overflows.
 
 ## Change the station name / logo
