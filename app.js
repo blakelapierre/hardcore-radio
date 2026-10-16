@@ -577,5 +577,7 @@
   if (isRandom()) startRandom(Math.floor(rnd() * tracks.length));
   setPlaying(false); text(el.onAirLabel, "Off air");
   renderAll();
+  // Reveal the cards below the track note (and the sidebar cards) once JS has filled them, so nothing shifts on load.
+  var layoutEl = document.querySelector("main.layout"); if (layoutEl) layoutEl.removeAttribute("data-pending");
   loadApi();
 })();

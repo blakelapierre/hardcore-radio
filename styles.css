@@ -45,18 +45,17 @@ a { color: #ff8fa3; }
 .on-air.live .dot { background: var(--accent); box-shadow: 0 0 0 0 rgba(255,77,109,.7); animation: pulse 1.6s infinite; }
 @keyframes pulse { 70% { box-shadow: 0 0 0 8px rgba(255,77,109,0); } 100% { box-shadow: 0 0 0 0 rgba(255,77,109,0); } }
 
-/* Ad slots — placeholders, always outside/around the player */
-.ad-row { display: flex; justify-content: center; margin: 18px auto; }
-.ad-slot {
-  position: relative; display: flex; align-items: center; justify-content: center; margin: 0 auto;
-  background: repeating-linear-gradient(45deg, #151a24, #151a24 10px, #121620 10px, #121620 20px);
-  border: 1px dashed #3a4357; border-radius: 6px; color: var(--muted); max-width: 100%; overflow: hidden;
-}
-.ad-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; }
+/* Ad slots: always outside/around the player. Empty containers are display:none (no box, no label,
+   no flex gap). A slot shows once AdSense fills an <ins> inside it, or when you add class "ad-live"
+   to it after pasting a real manual ad unit (so the unit has room to load). */
+.ad-row { display: none; justify-content: center; margin: 18px auto; }
+.ad-slot { display: none; position: relative; align-items: center; justify-content: center; margin: 0 auto; max-width: 100%; overflow: hidden; }
+.ad-row:has(.ad-live, ins.adsbygoogle[data-ad-status="filled"]) { display: flex; }
+.ad-slot:is(.ad-live, :has(ins.adsbygoogle[data-ad-status="filled"])) { display: flex; }
 .ad-728x90 { width: 728px; height: 90px; }
 .ad-320x50 { width: 320px; height: 50px; }
 .ad-300x250 { width: 300px; height: 250px; }
-.ad-mobile { display: none; }
+.ad-slot.ad-mobile { display: none; }
 
 /* Layout */
 .layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 24px; align-items: start; padding-bottom: 32px; }
@@ -189,8 +188,8 @@ details.card[open] > summary { margin-bottom: 12px; }
   .side-col { position: static; }
 }
 @media (max-width: 760px) {
-  .ad-desktop { display: none; }
-  .ad-mobile { display: flex; }
+  .ad-slot.ad-desktop { display: none; }
+  .ad-slot.ad-mobile:is(.ad-live, :has(ins.adsbygoogle[data-ad-status="filled"])) { display: flex; }
   .wrap { padding: 0 12px; }
   .ad-row-top { margin: 10px auto; }
   .station-name { font-size: 1.05rem; }
@@ -234,8 +233,8 @@ details.card[open] > summary { margin-bottom: 12px; }
 .main-col { container-type: inline-size; container-name: maincol; }
 .main-col > .ad-row { width: 100%; }
 @container maincol (max-width: 727px) {
-  .ad-row .ad-desktop { display: none; }
-  .ad-row .ad-mobile { display: flex; }
+  .ad-row .ad-slot.ad-desktop { display: none; }
+  .ad-row .ad-slot.ad-mobile:is(.ad-live, :has(ins.adsbygoogle[data-ad-status="filled"])) { display: flex; }
 }
 .np-meta { flex: 1 1 0; }
 
@@ -259,3 +258,12 @@ details.card[open] > summary { margin-bottom: 12px; }
 .na-bio { margin: 0; color: #c8cede; font-size: .9rem; line-height: 1.5; }
 /* The sidebar now holds a variable-height card, so it scrolls with the page instead of sticking. */
 .side-col { position: static; }
+/* Reserve room for the Now Playing title (2 lines) and channel so filling them in on load doesn't shift the page. */
+.np-title { min-height: 2.5em; }
+.np-channel { display: block; min-height: 1.45em; }
+/* Until app.js has rendered (track note, artists, queue), keep the cards below the track note and the
+   sidebar cards out of layout. They then appear in place instead of being pushed around (no layout shift). */
+.layout[data-pending] #now-note-card ~ *, .layout[data-pending] .side-col > :not(.ad-slot), .layout[data-pending] ~ * { display: none; }
+/* Wide layout: the Artists panel lives in the left column, so its narrow-layout slot never renders
+   (it would otherwise flash in the main column before app.js moves the panel). */
+@media (min-width: 1200px) { #artists-slot { display: none; } }

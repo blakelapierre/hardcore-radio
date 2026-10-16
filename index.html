@@ -7,11 +7,10 @@
   <meta name="description" content="Hardcore: the hardest stuff out there. Hand-picked music videos with original track notes." />
   <meta name="theme-color" content="#0d0f14" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=202610070100" />
-  <!--
-    AdSense site-level script (enable after approval). Replace ca-pub-XXXXXXXXXXXXXXXX.
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-  -->
+  <link rel="stylesheet" href="styles.css?v=202610160200" />
+  <meta name="google-adsense-account" content="ca-pub-7577658984506050">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577658984506050" crossorigin="anonymous"></script>
+  <noscript><style>.layout[data-pending] #now-note-card ~ *, .layout[data-pending] .side-col > *, .layout[data-pending] ~ * { display: revert; }</style></noscript>
 </head>
 <body>
   <header class="site-header">
@@ -27,27 +26,25 @@
     </div>
   </header>
 
-  <!-- AD SLOT: Top leaderboard. 728x90 on desktop, 320x50 on mobile. -->
+  <!-- AD SLOT (empty until a manual unit is added; Auto ads run meanwhile. TODO: paste the ad unit's data-ad-slot ID from AdSense, then uncomment): Top leaderboard. 728x90 on desktop, 320x50 on mobile. -->
   <div class="wrap ad-row ad-row-top">
     <div class="ad-slot ad-728x90 ad-desktop" data-ad-size="728x90">
-      <span class="ad-label">Advertisement · 728×90</span>
       <!--
       <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
-           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1111111111"></ins>
+           data-ad-client="ca-pub-7577658984506050" data-ad-slot="TODO-AD-UNIT-SLOT-ID"></ins>
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       -->
     </div>
     <div class="ad-slot ad-320x50 ad-mobile" data-ad-size="320x50">
-      <span class="ad-label">Advertisement · 320×50</span>
       <!--
       <ins class="adsbygoogle" style="display:inline-block;width:320px;height:50px"
-           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="2222222222"></ins>
+           data-ad-client="ca-pub-7577658984506050" data-ad-slot="TODO-AD-UNIT-SLOT-ID"></ins>
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       -->
     </div>
   </div>
 
-  <main class="wrap layout">
+  <main class="wrap layout" data-pending>
     <!-- ARTISTS: left column on wide screens; app.js moves it below the player on narrower screens. -->
     <aside class="artist-col" id="artist-col" aria-label="Artists">
       <details class="card artists" id="artists-panel">
@@ -132,21 +129,19 @@
         <ol class="queue" id="queue"></ol>
       </section>
 
-      <!-- AD SLOT: Below the queue. 728x90 on desktop, 300x250 on mobile. -->
+      <!-- AD SLOT (empty until a manual unit is added; Auto ads run meanwhile. TODO: paste the ad unit's data-ad-slot ID from AdSense, then uncomment): Below the queue. 728x90 on desktop, 300x250 on mobile. -->
       <div class="ad-row">
         <div class="ad-slot ad-728x90 ad-desktop" data-ad-size="728x90">
-          <span class="ad-label">Advertisement · 728×90</span>
           <!--
           <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
-               data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="3333333333"></ins>
+               data-ad-client="ca-pub-7577658984506050" data-ad-slot="TODO-AD-UNIT-SLOT-ID"></ins>
           <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
           -->
         </div>
         <div class="ad-slot ad-300x250 ad-mobile" data-ad-size="300x250">
-          <span class="ad-label">Advertisement · 300×250</span>
           <!--
           <ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px"
-               data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="4444444444"></ins>
+               data-ad-client="ca-pub-7577658984506050" data-ad-slot="TODO-AD-UNIT-SLOT-ID"></ins>
           <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
           -->
         </div>
@@ -159,12 +154,11 @@
     </div>
 
     <aside class="side-col">
-      <!-- AD SLOT: Sidebar medium rectangle 300x250. -->
+      <!-- AD SLOT (empty until a manual unit is added; Auto ads run meanwhile. TODO: paste the ad unit's data-ad-slot ID from AdSense, then uncomment): Sidebar medium rectangle 300x250. -->
       <div class="ad-slot ad-300x250" data-ad-size="300x250">
-        <span class="ad-label">Advertisement · 300×250</span>
         <!--
         <ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px"
-             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="5555555555"></ins>
+             data-ad-client="ca-pub-7577658984506050" data-ad-slot="TODO-AD-UNIT-SLOT-ID"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         -->
       </div>
@@ -189,11 +183,11 @@
     </div>
   </footer>
 
-  <script src="playlist.js?v=202610070100"></script>
-  <script src="track-meta.js?v=202610070100" onerror="window.TRACK_META = {}"></script>
-  <script src="artists.js?v=202610070100" onerror="window.STATION_ARTISTS = {}"></script>
-  <script src="app.js?v=202610070100"></script>
+  <script src="playlist.js?v=202610160200"></script>
+  <script src="track-meta.js?v=202610160200" onerror="window.TRACK_META = {}"></script>
+  <script src="artists.js?v=202610160200" onerror="window.STATION_ARTISTS = {}"></script>
+  <script src="app.js?v=202610160200"></script>
   <script src="firebase-config.js"></script>
-  <script type="module" src="ratings.js?v=202610070100"></script>
+  <script type="module" src="ratings.js?v=202610160200"></script>
 </body>
 </html>

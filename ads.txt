@@ -1,4 +1,1 @@
-# ads.txt placeholder for Hardcore
-# After AdSense approval, replace the line below with the exact line shown in
-# AdSense > Sites > ads.txt (your real publisher ID). Must be served at /ads.txt on the root domain.
-# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+google.com, pub-7577658984506050, DIRECT, f08c47fec0942fa0

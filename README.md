@@ -96,7 +96,7 @@ python3 -m http.server 8080
 ```
 
 ## Ad slots
-Each slot in `index.html` is a `<div class="ad-slot …">` placeholder holding a commented AdSense `<ins>` template:
+Each slot in `index.html` is an empty, hidden `<div class="ad-slot …">` container (no box or label, so nothing looks unfinished during review) holding a commented AdSense `<ins>` template:
 
 | Location | Desktop | Mobile (≤760px) |
 |---|---|---|
@@ -105,8 +105,8 @@ Each slot in `index.html` is a `<div class="ad-slot …">` placeholder holding a
 | Below the queue | 728×90 | 300×250 |
 
 To go live after AdSense approval:
-1. Uncomment the `adsbygoogle.js` script in `<head>` and replace `ca-pub-XXXXXXXXXXXXXXXX`.
-2. In each slot, uncomment the `<ins>` block, set your publisher ID and `data-ad-slot` IDs, and remove the `<span class="ad-label">` placeholder text. You can keep a small "Advertisement" label if you like.
+1. The `adsbygoogle.js` loader and the `google-adsense-account` meta tag (`ca-pub-7577658984506050`) are already in `<head>` of `index.html` and `privacy.html`, and `ads.txt` holds the real line. Auto ads run until manual units exist.
+2. TODO when AdSense gives ad unit IDs: in each slot, replace `data-ad-slot="TODO-AD-UNIT-SLOT-ID"` with the unit's slot ID, uncomment the `<ins>` block, and add class `ad-live` to the slot `div` so it reserves its size. Slots never cover the player.
 3. Put your real line in `ads.txt` (see the comment in that file).
 4. Fill in `privacy.html` (date and contact). Use a Google-certified CMP for EEA/UK visitors.
 
