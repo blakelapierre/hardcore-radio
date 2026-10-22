@@ -198,6 +198,14 @@ window.STATION_CONFIG = {
       notes:
         "\"OK, You're Right\" is from 50 Cent's fourth studio album, Before I Self Destruct (2009), and Dr. Dre produced it. 50 plays the unbothered boss. He tells critics and doubters they can go ahead and say what they want about him, then rattles off the money, cars and status that he says prove his point. The video goes for a big, cartoonish, lavish look that matches the song's mocking confidence.",
     },
+    {
+      id: "Y1fZH0s_5L8",
+      title: "",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "This posse cut is track 11 on R.A. the Rugged Man's album Legends Never Die. Nature Sounds released the album on April 30, 2013. Mr. Green produced the track, and the hook is built from cuts of the Notorious B.I.G. repeating \"Dangerous.\" Brother Ali goes first with a boastful, self-mocking verse about clawing his way up with nothing handed to him. R.A. follows with a dense, deliberately offensive run that crowns himself golden-era royalty, and he gives Masta Ace his due by name-checking Ace's 1990s album Slaughtahouse. Ace closes with a cold, controlled verse that likens his flow to a blow to the head. It's three veteran lyricists playing pure battle-rap bravado. The language is extremely crude, but there's no message beyond being the most dangerous rapper on the track.",
+    },
   ],
 
   // Track notes for "playlist" mode, keyed by video ID (optional).

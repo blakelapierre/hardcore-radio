@@ -104,5 +104,10 @@ window.TRACK_META = {
     "title": "50 Cent - OK, You're Right (Official Music Video)",
     "channel": "50CentVEVO",
     "channelUrl": "https://www.youtube.com/@50CentVEVO"
+  },
+  "Y1fZH0s_5L8": {
+    "title": "R.A. the Rugged Man - The Dangerous Three ft. Brother Ali, Masta Ace",
+    "channel": "RAtheRuggedManVEVO",
+    "channelUrl": "https://www.youtube.com/@RAtheRuggedManVEVO"
   }
 };

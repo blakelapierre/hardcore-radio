@@ -6,6 +6,9 @@
  */
 window.STATION_ARTISTS = {
   artists: {
+    "ra-the-rugged-man": { name: "R.A. the Rugged Man", bio: "R.A. the Rugged Man (R.A. Thorburn) is a New York rapper and producer who started rapping at 12 and signed with Jive Records at 18. Jive never released that debut, Night of the Bloody Apes. He later put out Die, Rugged Man, Die (2004), Legends Never Die (2013) and All My Heroes Are Dead (2020)." },
+    "brother-ali": { name: "Brother Ali", bio: "Brother Ali (Ali Douglas Newman) is a rapper and community activist in the Rhymesayers Entertainment collective. The Undisputed Truth (2007), Us (2009) and Mourning in America and Dreaming in Color (2012) all made the Billboard charts." },
+    "masta-ace": { name: "Masta Ace", bio: "Masta Ace (Duval Clear) is a New York rapper and producer from Mr. Magic's Juice Crew. He's best known for his verse on the 1988 posse cut \"The Symphony,\" next to Kool G Rap, Craig G and Big Daddy Kane." },
     "nerdout": { name: "NerdOut", bio: "NerdOut is a YouTube channel that puts out rap songs about video games. NemRaps writes and produces the songs, and the channel's 2016 collection Year 1 covers games such as Call of Duty: Black Ops III, Watch Dogs, Titanfall and Quantum Break." },
     "the-snooker-team": { name: "The Snooker Team", bio: "The Snooker Team is the crew of older MCs around Pete & Bas, including Patrick Karneigh Junior. They first appeared on the 2020 \"Windowframe Cypher\" and came back with new members for Part II in 2022." },
     "50-cent": { name: "50 Cent", bio: "50 Cent (Curtis Jackson) is a rapper from South Jamaica, Queens, who founded G-Unit. Eminem and Dr. Dre signed him, and his 2003 debut Get Rich or Die Tryin' became one of the best-selling rap albums of its decade. He later built a second career as a TV producer." },
@@ -59,5 +62,6 @@ window.STATION_ARTISTS = {
     "MV_3Dpw-BRY": ["kavinsky"],
     "H2jCbXiEQI4": ["papa-roach"],
     "h3rdQnZ_mV8": ["50-cent"],
+    "Y1fZH0s_5L8": ["ra-the-rugged-man", "brother-ali", "masta-ace"],
   },
 };
