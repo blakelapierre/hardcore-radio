@@ -16,7 +16,7 @@
 
   var $ = function (id) { return document.getElementById(id); };
   var el = {
-    play: $("btn-play"), next: $("btn-next"), prev: $("btn-prev"), random: $("btn-random"), randomState: $("random-state"),
+    play: $("btn-play"), copyLink: $("btn-copy-link"), next: $("btn-next"), prev: $("btn-prev"), random: $("btn-random"), randomState: $("random-state"),
     volume: $("volume"), queue: $("queue"), notes: $("track-notes"), about: $("about"),
     title: $("np-title"), channel: $("np-channel"), thumb: $("np-thumb"),
     bar: $("progress-bar"), cur: $("t-cur"), dur: $("t-dur"), onAir: $("on-air"),
@@ -356,7 +356,31 @@
     try { document.dispatchEvent(new CustomEvent("radio:tracks", { detail: window.RadioState })); } catch (_) {}
   }
 
-  function renderAll() { renderNowPlaying(); renderNowNote(); renderQueue(); renderNotes(); renderArtists(); notify(); }
+  // ---------- Shareable track URLs: ?t=<videoId> ----------
+  // ?t= (not ?v=, which the asset cache-bust uses) works on GitHub Pages: any query hits index.html.
+  var ID_RE = /^[A-Za-z0-9_-]{11}$/;
+  function urlTrackId() {
+    var id = null; try { id = new URLSearchParams(location.search).get("t"); } catch (_) {}
+    return id && ID_RE.test(id) ? id : null;
+  }
+  function trackIndexOf(id) { for (var i = 0; i < tracks.length; i++) if (tracks[i].id === id) return i; return -1; }
+  function trackUrl(id) {
+    var u = new URL(location.href); u.hash = "";
+    if (id) u.searchParams.set("t", id); else u.searchParams.delete("t");
+    return u.toString();
+  }
+  function syncUrl() {
+    var t = current();
+    if (!t || MODE !== "videos" || !history.replaceState) return;
+    if (urlTrackId() === t.id) return;
+    try { history.replaceState({ t: t.id }, "", trackUrl(t.id)); } catch (_) {}
+  }
+  function jumpToIdx(i, autoplay) {
+    if (isRandom()) { randomJumpTo(i); loadCurrent(autoplay); return; }
+    pos = order.indexOf(i); loadCurrent(autoplay);
+  }
+
+  function renderAll() { renderNowPlaying(); renderNowNote(); renderQueue(); renderNotes(); renderArtists(); notify(); syncUrl(); }
 
   function setPlaying(on) {
     playing = on;
@@ -574,7 +598,23 @@
   placeArtists();
   renderRandomBtn();
   // Random start: with random on, the station starts on a random track.
-  if (isRandom()) startRandom(Math.floor(rnd() * tracks.length));
+  var linkIdx = MODE === "videos" ? trackIndexOf(urlTrackId()) : -1;
+  if (isRandom()) startRandom(linkIdx >= 0 ? linkIdx : Math.floor(rnd() * tracks.length));
+  else if (linkIdx >= 0) pos = order.indexOf(linkIdx);
+  // Back/forward or a manually edited ?t= : switch to that track (cued, no surprise autoplay).
+  window.addEventListener("popstate", function () {
+    var i = trackIndexOf(urlTrackId());
+    if (i >= 0 && i !== curIdx()) jumpToIdx(i, false);
+  });
+  if (el.copyLink) el.copyLink.addEventListener("click", function () {
+    var t = current(); if (!t) return;
+    var url = trackUrl(t.id), done = function (ok) {
+      text(el.copyLink, ok ? "Link copied" : "Copy failed");
+      setTimeout(function () { text(el.copyLink, "Copy link"); }, 1800);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(function () { done(true); }, function () { done(false); });
+    else { try { var ta = document.createElement("textarea"); ta.value = url; document.body.appendChild(ta); ta.select(); done(document.execCommand("copy")); ta.remove(); } catch (_) { done(false); } }
+  });
   setPlaying(false); text(el.onAirLabel, "Off air");
   renderAll();
   // Reveal the cards below the track note (and the sidebar cards) once JS has filled them, so nothing shifts on load.

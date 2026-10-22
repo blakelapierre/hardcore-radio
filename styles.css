@@ -267,3 +267,9 @@ details.card[open] > summary { margin-bottom: 12px; }
 /* Wide layout: the Artists panel lives in the left column, so its narrow-layout slot never renders
    (it would otherwise flash in the main column before app.js moves the panel). */
 @media (min-width: 1200px) { #artists-slot { display: none; } }
+
+/* Copy-link button in the "About this track" card */
+.now-note-head { display: flex; align-items: center; justify-content: space-between; gap: .75rem; margin-bottom: 6px; }
+.now-note-head h2 { margin-bottom: 0; }
+.copy-link { flex: none; font: inherit; font-size: .8rem; padding: .25rem .6rem; border-radius: 999px; border: 1px solid currentColor; background: transparent; color: inherit; opacity: .7; cursor: pointer; }
+.copy-link:hover, .copy-link:focus-visible { opacity: 1; }

@@ -16,7 +16,7 @@
   <meta name="description" content="Hardcore: the hardest stuff out there. Hand-picked music videos with original track notes." />
   <meta name="theme-color" content="#0d0f14" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=202610221400" />
+  <link rel="stylesheet" href="styles.css?v=202610221450" />
   <meta name="google-adsense-account" content="ca-pub-7577658984506050">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577658984506050" crossorigin="anonymous"></script>
   <noscript><style>.layout[data-pending] #now-note-card ~ *, .layout[data-pending] .side-col > *, .layout[data-pending] ~ * { display: revert; }</style></noscript>
@@ -125,7 +125,7 @@
 
       <!-- Current track's note, directly under the player (updates on every track change). -->
       <section class="card now-note" id="now-note-card" aria-labelledby="now-note-h" aria-live="polite">
-        <h2 id="now-note-h">About this track</h2>
+        <div class="now-note-head"><h2 id="now-note-h">About this track</h2><button type="button" class="copy-link" id="btn-copy-link" title="Copy a link to this track">Copy link</button></div>
         <p class="now-artists" id="now-artists"></p>
         <p class="now-note-text" id="now-note"></p>
       </section>
@@ -192,11 +192,11 @@
     </div>
   </footer>
 
-  <script src="playlist.js?v=202610221400"></script>
-  <script src="track-meta.js?v=202610221400" onerror="window.TRACK_META = {}"></script>
-  <script src="artists.js?v=202610221400" onerror="window.STATION_ARTISTS = {}"></script>
-  <script src="app.js?v=202610221400"></script>
+  <script src="playlist.js?v=202610221450"></script>
+  <script src="track-meta.js?v=202610221450" onerror="window.TRACK_META = {}"></script>
+  <script src="artists.js?v=202610221450" onerror="window.STATION_ARTISTS = {}"></script>
+  <script src="app.js?v=202610221450"></script>
   <script src="firebase-config.js"></script>
-  <script type="module" src="ratings.js?v=202610221400"></script>
+  <script type="module" src="ratings.js?v=202610221450"></script>
 </body>
 </html>
