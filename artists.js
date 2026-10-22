@@ -6,6 +6,11 @@
  */
 window.STATION_ARTISTS = {
   artists: {
+    "nerdout": { name: "NerdOut", bio: "NerdOut is a YouTube channel that puts out rap songs about video games. NemRaps writes and produces the songs, and the channel's 2016 collection Year 1 covers games such as Call of Duty: Black Ops III, Watch Dogs, Titanfall and Quantum Break." },
+    "the-snooker-team": { name: "The Snooker Team", bio: "The Snooker Team is the crew of older MCs around Pete & Bas, including Patrick Karneigh Junior. They first appeared on the 2020 \"Windowframe Cypher\" and came back with new members for Part II in 2022." },
+    "50-cent": { name: "50 Cent", bio: "50 Cent (Curtis Jackson) is a rapper from South Jamaica, Queens, who founded G-Unit. Eminem and Dr. Dre signed him, and his 2003 debut Get Rich or Die Tryin' became one of the best-selling rap albums of its decade. He later built a second career as a TV producer." },
+    "kavinsky": { name: "Kavinsky", bio: "Kavinsky (Vincent Belorgey) is a French electronic producer whose retro-'80s, car-obsessed sound helped define synthwave. \"Nightcall\" (2010), which was used in the film Drive, made him famous, and his debut album OutRun followed in 2013." },
+    "papa-roach": { name: "Papa Roach", bio: "Papa Roach is a rock band from Vacaville, California, fronted by Jacoby Shaddix. Their major-label debut Infest (2000) and its single \"Last Resort\" made them one of the biggest names of the nu-metal era." },
     "the-killers": { name: "The Killers", bio: "The Killers are a rock band formed in Las Vegas in 2001 by singer Brandon Flowers and guitarist Dave Keuning, joined in 2002 by bassist Mark Stoermer and drummer Ronnie Vannucci Jr. Starting with Hot Fuss (2004), all seven of their studio albums have topped the UK chart." },
     "steve-grant": { name: "Steve Grant", bio: "Steve Grant is an independent protest rapper whose songs and videos are recorded and produced at Durty Mics Studios. His lyrics speak to the Anonymous and activist crowd, and his track here was filmed live at the 2013 Million Mask March outside the White House." },
     "poison-pen": { name: "Poison Pen", bio: "Poison Pen (Lékan Herron) is a battle MC from Bed-Stuy, Brooklyn, and a member of New York's underground Stronghold crew. He came up through the late-'90s NYC battle circuit, went on to host Da Cypha Emcee Battles, and released The Money Shot in 2009." },
@@ -49,5 +54,10 @@ window.STATION_ARTISTS = {
     "kl4wkIPiTcY": ["rage-against-the-machine"],
     "sjNLqGSt7dA": ["canon"],
     "aMmkNDwnl68": ["g-unit"],
+    "MuWx7DBuT0A": ["nerdout"],
+    "JYsiJ_WzxV8": ["pete-and-bas", "the-snooker-team"],
+    "MV_3Dpw-BRY": ["kavinsky"],
+    "H2jCbXiEQI4": ["papa-roach"],
+    "h3rdQnZ_mV8": ["50-cent"],
   },
 };

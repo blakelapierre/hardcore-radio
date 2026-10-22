@@ -158,6 +158,46 @@ window.STATION_CONFIG = {
       notes:
         "This is the title track that opens Beg for Mercy, G-Unit's debut album. It came out November 14, 2003, the same day as Jay-Z's The Black Album. Hi-Tek produced it around a sample of Triumvirat's \"Million Dollars.\" After 50 Cent's roll call, Young Buck delivers a menacing verse that shouts out Shady/Aftermath and Interscope, and Lloyd Banks follows with tour-bus bravado. The fourth member, Tony Yayo, was in jail during recording and appears on only two album tracks, neither of them this one. Beg for Mercy debuted at No. 3 on the Billboard 200, peaked at No. 2 and went double platinum.",
     },
+    {
+      id: "MuWx7DBuT0A",
+      title: "",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "NerdOut is a YouTube channel that makes rap songs about video games, and this track was written and produced by NemRaps. It appeared on the channel's 2016 collection Year 1. It's a tribute to Remedy Entertainment's 2016 time-bending shooter Quantum Break, told from the point of view of the game's hero, Jack Joyce. He freezes time, weaves through gunfire from the Monarch soldiers and squares off against the villain Paul Serene, who built the time machine that fractured time. The hook comes back to everything moving in slow motion while he hesitates on the trigger. Don't mix it up with Petri Alanko's instrumental of the same name on the game's official score.",
+    },
+    {
+      id: "JYsiJ_WzxV8",
+      title: "",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "Pete & Bas released this sequel to their 2020 posse cut \"Windowframe Cypher\" in October 2022. They brought back their crew of old-timer MCs, The Snooker Team, with returning member Patrick Karneigh Junior and some new faces. The joke is the same one that made the duo famous: pensioners trading cold, menacing drill and grime bars in turn. Fans singled out the verses from PKJ, Uncle Bal, AirMax 90 and Barry. It's done with a straight face, and it's a showcase of flows as much as a gag.",
+    },
+    {
+      id: "MV_3Dpw-BRY",
+      title: "",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "\"Nightcall\" is the French producer Kavinsky's 2010 single on the Paris label Record Makers. Lovefoxxx of the Brazilian band CSS sings the female part, answering Kavinsky's vocoder-treated verses. Guy-Manuel de Homem-Christo of Daft Punk co-produced it. Nicolas Winding Refn used it over the opening credits of his 2011 film Drive, which turned it into a cult synthwave anthem. The song is a late-night drive and a phone call from someone who wants to get close, set over slow, heavy analog synths.",
+    },
+    {
+      id: "H2jCbXiEQI4",
+      title: "",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "This song comes from Papa Roach's major-label breakthrough Infest (2000), the album that also gave the world \"Last Resort,\" and it was released as a single. Jacoby Shaddix aims it at consumerism: chasing money and possessions until they control you. That idea echoes the famous Fight Club line about the things you own ending up owning you. Verses that stay quiet and tense build to a shouted nu-metal chorus, and the band frames it as a warning about materialism, not a sermon.",
+    },
+    {
+      id: "h3rdQnZ_mV8",
+      title: "",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "\"OK, You're Right\" is from 50 Cent's fourth studio album, Before I Self Destruct (2009), and Dr. Dre produced it. 50 plays the unbothered boss. He tells critics and doubters they can go ahead and say what they want about him, then rattles off the money, cars and status that he says prove his point. The video goes for a big, cartoonish, lavish look that matches the song's mocking confidence.",
+    },
   ],
 
   // Track notes for "playlist" mode, keyed by video ID (optional).

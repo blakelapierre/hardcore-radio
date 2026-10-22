@@ -79,5 +79,30 @@ window.TRACK_META = {
     "title": "G-Unit (Album Version (Explicit))",
     "channel": "G-Unit - Topic",
     "channelUrl": "https://www.youtube.com/channel/UCOqyGxp8d02g2pOUEwU4-Rw"
+  },
+  "MuWx7DBuT0A": {
+    "title": "Quantum Break Song | \"Dodging Bullets\"  !",
+    "channel": "NerdOut!",
+    "channelUrl": "https://www.youtube.com/@NerdOut"
+  },
+  "JYsiJ_WzxV8": {
+    "title": "Pete & Bas -  Windowframe Cypher Part II (ft. The Snooker Team)",
+    "channel": "Sindhu World",
+    "channelUrl": "https://www.youtube.com/@sindhuworld"
+  },
+  "MV_3Dpw-BRY": {
+    "title": "Kavinsky - Nightcall (Drive Original Movie Soundtrack) (Official Audio)",
+    "channel": "Record Makers",
+    "channelUrl": "https://www.youtube.com/@RecordMakers"
+  },
+  "H2jCbXiEQI4": {
+    "title": "Papa Roach - Between Angels And Insects",
+    "channel": "PapaRoachVEVO",
+    "channelUrl": "https://www.youtube.com/@PapaRoachVEVO"
+  },
+  "h3rdQnZ_mV8": {
+    "title": "50 Cent - OK, You're Right (Official Music Video)",
+    "channel": "50CentVEVO",
+    "channelUrl": "https://www.youtube.com/@50CentVEVO"
   }
 };
