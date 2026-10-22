@@ -5,6 +5,11 @@ window.TRACK_META = {
     "channel": "Steve Grant",
     "channelUrl": "https://www.youtube.com/@stevegrant8805"
   },
+  "w3xcybdis1k": {
+    "title": "The Killers - The Man",
+    "channel": "TheKillersVEVO",
+    "channelUrl": "https://www.youtube.com/@TheKillersVEVO"
+  },
   "1yOoM7_AseY": {
     "title": "The 2nd Ammendment feat. Immortal Technique",
     "channel": "Poison Pen - Topic",

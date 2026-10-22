@@ -6,6 +6,7 @@
  */
 window.STATION_ARTISTS = {
   artists: {
+    "the-killers": { name: "The Killers", bio: "The Killers are a rock band formed in Las Vegas in 2001 by singer Brandon Flowers and guitarist Dave Keuning, joined in 2002 by bassist Mark Stoermer and drummer Ronnie Vannucci Jr. Starting with Hot Fuss (2004), all seven of their studio albums have topped the UK chart." },
     "steve-grant": { name: "Steve Grant", bio: "Steve Grant is an independent protest rapper whose songs and videos are recorded and produced at Durty Mics Studios. His lyrics speak to the Anonymous and activist crowd, and his track here was filmed live at the 2013 Million Mask March outside the White House." },
     "poison-pen": { name: "Poison Pen", bio: "Poison Pen (Lékan Herron) is a battle MC from Bed-Stuy, Brooklyn, and a member of New York's underground Stronghold crew. He came up through the late-'90s NYC battle circuit, went on to host Da Cypha Emcee Battles, and released The Money Shot in 2009." },
     "immortal-technique": { name: "Immortal Technique", bio: "Immortal Technique (Felipe Coronel) was born in Lima, Peru, and raised in Harlem. He's a fiercely independent rapper and activist, known for the Revolutionary albums and for lyrics about politics, religion, institutional racism and government power." },
@@ -33,6 +34,7 @@ window.STATION_ARTISTS = {
   },
   tracks: {
     "dnhqZcG0tew": ["steve-grant"],
+    "w3xcybdis1k": ["the-killers"],
     "1yOoM7_AseY": ["poison-pen", "immortal-technique"],
     "ZbiMp6VqYYg": ["dr-dre", "jill-scott", "jon-connor", "anderson-paak"],
     "T9CHWOsGrx0": ["dr-dre", "king-mez", "justus"],

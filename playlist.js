@@ -39,6 +39,14 @@ window.STATION_CONFIG = {
         "Recorded where rap rarely goes: live outside the White House at the Million Mask March on November 5, 2013. That's the annual Guy Fawkes Day protest tied to the hacktivist collective Anonymous, where crowds show up in V for Vendetta masks. Steve Grant wrote the words, and the music is credited to Courtney Driver. The title comes from the Book of Revelation, where the opening of the seventh seal starts the end times, and Grant pitches the moment as that kind of turning point. Over three verses he casts rappers, hackers, activists and \"infowarriors\" as one awakened movement pushing back against what he describes as threatened freedoms, media deception and a collapsing \"new world order.\" The hook is a chant about seeing through the lies and not being afraid. It's raw protest rap, crowd noise and all: the artist's manifesto, delivered at street level.",
     },
     {
+      id: "w3xcybdis1k",
+      title: "",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "The lead single from Wonderful Wonderful (2017), the Las Vegas band's fifth album and their first in five years. Brandon Flowers says he wrote it looking back at the cocky 21-year-old he was around Hot Fuss, and he sings that persona's brags with a wink: money in the bank, a household name, nothing can break him. Drummer Ronnie Vannucci Jr. described it as poking fun at the chest-out, invincible idea of manhood, which the band say is really about empathy and compassion. Producer Jacknife Lee built the strutting disco-funk groove around elements of Kool & the Gang's 1975 \"Spirit of the Boogie.\" Tim Mattia's video casts Flowers as five Las Vegas show-offs whose luck runs out. The song topped Billboard's Adult Alternative chart.",
+    },
+    {
       id: "1yOoM7_AseY",
       title: "",
       channel: "",
