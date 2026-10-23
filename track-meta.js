@@ -10,6 +10,16 @@ window.TRACK_META = {
     "channel": "TheKillersVEVO",
     "channelUrl": "https://www.youtube.com/@TheKillersVEVO"
   },
+  "JaXhks4YqzY": {
+    "title": "2. The Martyr by Immortal Technique [2011]",
+    "channel": "TechniqueForum",
+    "channelUrl": "https://www.youtube.com/@TechniqueForum"
+  },
+  "OqgIKOXykHo": {
+    "title": "R.A. the Rugged Man - Who Do We Trust? (Official Music Video) ft. Immortal Technique",
+    "channel": "RAtheRuggedManVEVO",
+    "channelUrl": "https://www.youtube.com/@RAtheRuggedManVEVO"
+  },
   "1yOoM7_AseY": {
     "title": "The 2nd Ammendment feat. Immortal Technique",
     "channel": "Poison Pen - Topic",

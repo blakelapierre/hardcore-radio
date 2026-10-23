@@ -62,6 +62,8 @@ window.STATION_ARTISTS = {
     "MV_3Dpw-BRY": ["kavinsky"],
     "H2jCbXiEQI4": ["papa-roach"],
     "h3rdQnZ_mV8": ["50-cent"],
+    "JaXhks4YqzY": ["immortal-technique"],
+    "OqgIKOXykHo": ["ra-the-rugged-man", "immortal-technique"],
     "Y1fZH0s_5L8": ["ra-the-rugged-man", "brother-ali", "masta-ace"],
   },
 };

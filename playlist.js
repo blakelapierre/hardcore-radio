@@ -47,6 +47,22 @@ window.STATION_CONFIG = {
         "The lead single from Wonderful Wonderful (2017), the Las Vegas band's fifth album and their first in five years. Brandon Flowers says he wrote it looking back at the cocky 21-year-old he was around Hot Fuss, and he sings that persona's brags with a wink: money in the bank, a household name, nothing can break him. Drummer Ronnie Vannucci Jr. described it as poking fun at the chest-out, invincible idea of manhood, which the band say is really about empathy and compassion. Producer Jacknife Lee built the strutting disco-funk groove around elements of Kool & the Gang's 1975 \"Spirit of the Boogie.\" Tim Mattia's video casts Flowers as five Las Vegas show-offs whose luck runs out. The song topped Billboard's Adult Alternative chart.",
     },
     {
+      id: "JaXhks4YqzY",
+      title: "Immortal Technique - The Martyr",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "This is the title track and second song on The Martyr, which Immortal Technique released through Viper Records on October 27, 2011, as a free album download. Southpaw produced the track, and it samples the Beatles' \"Eleanor Rigby.\" It opens with a line from the film Elizabeth about being content to die for one's beliefs. In the first verse, Technique describes guerrilla war from the insurgent's side: the goal is to make the occupier bleed until it runs out of soldiers. He says powerful states paint freedom fighters as terrorists and install friendly factions. The second verse lists leaders and revolutionaries who were killed, arguing that many were brought down by people from their own side. Among them are Gandhi, Yitzhak Rabin, Anwar Sadat, Malcolm X and Patrice Lumumba. He also claims JFK was killed by factions within his own government. That's the artist's view, set to a hook about martyrs being born in the heart of a war.",
+    },
+    {
+      id: "OqgIKOXykHo",
+      title: "",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "\"Who Do We Trust?\" pairs R.A. the Rugged Man with Immortal Technique on R.A.'s 2020 album All My Heroes Are Dead, released by Nature Sounds. Tone Spliff produced the track and did the scratches. F.T. of Street Smartz sings the chorus vocals, and the official video was directed by Streetheat. R.A. opens by joking that he should leave politics to dead prez and Immortal Technique. Then Technique delivers a dense verse about surveillance, mass incarceration, neoconservative foreign policy and what he calls a caste system protecting the ruling class. He adds that his people have lived under a so-called New World Order for five hundred years. R.A. takes aim at U.S. meddling abroad, drone strikes and the civilian deaths in Yemen, the treatment of whistleblowers, and media spin. The track ends on a clip of a former CIA director admitting that the agency lied, cheated and stole. It's a full-on protest record, and the distrust of government and media is the artists' own.",
+    },
+    {
       id: "1yOoM7_AseY",
       title: "",
       channel: "",
