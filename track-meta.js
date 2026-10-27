@@ -119,5 +119,40 @@ window.TRACK_META = {
     "title": "R.A. the Rugged Man - The Dangerous Three ft. Brother Ali, Masta Ace",
     "channel": "RAtheRuggedManVEVO",
     "channelUrl": "https://www.youtube.com/@RAtheRuggedManVEVO"
+  },
+  "JhqyZeUlE8U": {
+    "title": "Beastie Boys - Sure Shot",
+    "channel": "BeastieBoysVEVO",
+    "channelUrl": "https://www.youtube.com/@BeastieBoysVEVO"
+  },
+  "hwn_J_APOZA": {
+    "title": "NECRO - \"TAKE HIPHOP BACK\" ft. VINNIE PAZ & IMMORTAL TECHNIQUE (OFFICIAL VIDEO) Underground Hip Hop",
+    "channel": "NECRO VIDEO",
+    "channelUrl": "https://www.youtube.com/@necrovideo"
+  },
+  "I1WhjewSlYw": {
+    "title": "JUST CAUSE 4 RAP by JT Music - \"Adrenaline Junkie\"",
+    "channel": "JT Music",
+    "channelUrl": "https://www.youtube.com/@JTM"
+  },
+  "qDZV8TdnCoo": {
+    "title": "Rage Against The Machine - Down Rodeo (Official Audio)",
+    "channel": "RATMVEVO",
+    "channelUrl": "https://www.youtube.com/@RATMVEVO"
+  },
+  "mna8mZP9eSg": {
+    "title": "System Of A Down - Lost In Hollywood (Official Audio)",
+    "channel": "systemofadownVEVO",
+    "channelUrl": "https://www.youtube.com/@systemofadownVEVO"
+  },
+  "lSBS1KNuvoc": {
+    "title": "Digital War",
+    "channel": "Army of the Pharaohs - Topic",
+    "channelUrl": "https://www.youtube.com/channel/UCAUHwekgb253ey4BuspDSMg"
+  },
+  "6_sLbVrJPJQ": {
+    "title": "R.A. the Rugged Man - Sam Peckinpah ft. Vinnie Paz, Sadat X",
+    "channel": "RAtheRuggedManVEVO",
+    "channelUrl": "https://www.youtube.com/@RAtheRuggedManVEVO"
   }
 };

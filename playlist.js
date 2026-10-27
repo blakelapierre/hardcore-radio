@@ -222,6 +222,62 @@ window.STATION_CONFIG = {
       notes:
         "This posse cut is track 11 on R.A. the Rugged Man's album Legends Never Die. Nature Sounds released the album on April 30, 2013. Mr. Green produced the track, and the hook is built from cuts of the Notorious B.I.G. repeating \"Dangerous.\" Brother Ali goes first with a boastful, self-mocking verse about clawing his way up with nothing handed to him. R.A. follows with a dense, deliberately offensive run that crowns himself golden-era royalty, and he gives Masta Ace his due by name-checking Ace's 1990s album Slaughtahouse. Ace closes with a cold, controlled verse that likens his flow to a blow to the head. It's three veteran lyricists playing pure battle-rap bravado. The language is extremely crude, but there's no message beyond being the most dangerous rapper on the track.",
     },
+    {
+      id: "JhqyZeUlE8U",
+      title: "",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "Sure Shot opens the Beastie Boys' 1994 album Ill Communication and was its third single. It reached No. 27 in the UK. The group produced it with Mario Caldato Jr., and the looping flute comes from a sample of jazz flautist Jeremy Steig's \"Howlin' for Judy.\" Ad-Rock later said it was arranged like a hardcore punk song: verse, chorus, break, all mathematical. Mike D, Ad-Rock and MCA trade quick-fire boasts stuffed with pop-culture references. Then the final verse turns serious and calls for an end to disrespecting women. It offers love and respect to mothers, sisters, wives and friends, a notable stance for a rap record in 1994.",
+    },
+    {
+      id: "hwn_J_APOZA",
+      title: "",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "Necro brings in Vinnie Paz and Immortal Technique for a deliberately offensive throwback. Genius dates the song to October 23, 2015, and the video, directed by Tom Vujcic with Necro co-directing, went up that November. The pitch, as the song page puts it, is to take hip-hop back to when it offended people. Necro mocks pop rappers and dance trends as sell-outs. Vinnie Paz delivers horror-movie violence and Philly references. Immortal Technique closes on politics: in his view, Americans are pacified by cable TV, the government barely has humanity left, and the people who blamed hip-hop for brainwashing now use pop culture as propaganda. The language is extremely crude throughout, including slurs.",
+    },
+    {
+      id: "I1WhjewSlYw",
+      title: "",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "JT Music made this rap for Just Cause 4, Avalanche Studios' 2018 action game published by Square Enix, and uploaded it on December 8, 2018. That was four days after the game came out. It's written in character as the demolition-loving hero the lyrics call Rico Rodriguez, who brags about blowing up cars, chasing storms and toppling corrupt governments. The hook turns the game's title into a pun on doing it all \"just 'cause.\" Genius credits Christian Ames as writer and producer. The video's own description jokes that they made the song just 'cause.",
+    },
+    {
+      id: "qDZV8TdnCoo",
+      title: "",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "Down Rodeo is track 7 on Rage Against the Machine's 1996 album Evil Empire, which debuted at No. 1 on the Billboard 200. It was planned as a third single, but per Genius a domestic single never came out. Zack de la Rocha imagines rolling down Rodeo Drive armed, a confrontational image of class rage written in the shadow of the 1992 Los Angeles riots. The verses describe hunger, factory jobs moving south and the drug war hollowing out neighborhoods. In the band's view, voting can't change that structure, and they invoke Fred Hampton. It ends on a quiet chant about a peaceful dance for the things people will never have.",
+    },
+    {
+      id: "mna8mZP9eSg",
+      title: "",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "Lost in Hollywood closes System of a Down's 2005 album Mezmerize, produced by Daron Malakian and Rick Rubin. Malakian and Serj Tankian trade lines warning someone they should never have gone to, or trusted, Hollywood. The chorus pictures the strays and smokers on Santa Monica and Sunset Boulevards. Malakian told Guitar World that people outside see Hollywood as a fantasy land, but he saw people giving up their morals and everything else for the town. It's a slower, more mournful closer.",
+    },
+    {
+      id: "lSBS1KNuvoc",
+      title: "",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "Digital War is track 12 on Army of the Pharaohs' fourth album In Death Reborn. It came out April 22, 2014, on Vinnie Paz's label Enemy Soil. It's a full posse cut: Celph Titled, Planetary, Blacastan, Esoteric, Apathy, Crypt the Warchild and Vinnie Paz each take a verse, and Vinnie also handles the hook warning rappers they're in for a bad year. The verses are pure battle-rap bravado, packed with sniper imagery, wrestling and movie references, and cartoonish threats. The violence is graphic and the language crude, but there's no message beyond being the hardest crew in the room.",
+    },
+    {
+      id: "6_sLbVrJPJQ",
+      title: "",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "Sam Peckinpah is track 15 on R.A. the Rugged Man's 2013 album Legends Never Die. It's named after the director of famously violent films like Straw Dogs and The Wild Bunch. R.A. and Vinnie Paz trade short bursts of escalating shock lines: assaulting the powerful, taunting religion, and crowning themselves untouchable. Brand Nubian's Sadat X shouts the hook. Genius notes it was the pair's fourth collaboration after Jedi Mind Tricks' \"Uncommon Valor\" and tracks on Vinnie's first two solo albums. It's intentionally over the top, with extremely offensive language including slurs and a rape boast. Treat it as cartoon horror, not commentary.",
+    },
   ],
 
   // Track notes for "playlist" mode, keyed by video ID (optional).
