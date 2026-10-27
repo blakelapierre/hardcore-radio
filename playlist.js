@@ -278,6 +278,14 @@ window.STATION_CONFIG = {
       notes:
         "Sam Peckinpah is track 15 on R.A. the Rugged Man's 2013 album Legends Never Die. It's named after the director of famously violent films like Straw Dogs and The Wild Bunch. R.A. and Vinnie Paz trade short bursts of escalating shock lines: assaulting the powerful, taunting religion, and crowning themselves untouchable. Brand Nubian's Sadat X shouts the hook. Genius notes it was the pair's fourth collaboration after Jedi Mind Tricks' \"Uncommon Valor\" and tracks on Vinnie's first two solo albums. It's intentionally over the top, with extremely offensive language including slurs and a rape boast. Treat it as cartoon horror, not commentary.",
     },
+    {
+      id: "ADdpLv3RDhA",
+      title: "",
+      channel: "",
+      // EDITABLE track note (sources: see README "Track note sources")
+      notes:
+        "N.W.A's protest song from Straight Outta Compton. The YouTube release lists it as a 1988 Priority Records track produced by Dr. Dre and DJ Yella, with Ice Cube, MC Ren and Eazy-E credited as lyricists. It's staged as a mock trial with Judge Dre presiding over N.W.A versus the police department, and each rapper takes the stand to testify. Ice Cube describes being profiled and searched for being young and Black. MC Ren and Eazy-E answer harassment with defiant, violent threats, and the closing skit delivers a guilty verdict against a racist cop. Per Wikipedia, the song protests police brutality and racial profiling. In 2025 Rolling Stone ranked it No. 10 on its list of the 100 best protest songs. The anti-police stance and imagined retaliation are the artists' views, and the lyrics are explicit, including slurs.",
+    },
   ],
 
   // Track notes for "playlist" mode, keyed by video ID (optional).

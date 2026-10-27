@@ -154,5 +154,10 @@ window.TRACK_META = {
     "title": "R.A. the Rugged Man - Sam Peckinpah ft. Vinnie Paz, Sadat X",
     "channel": "RAtheRuggedManVEVO",
     "channelUrl": "https://www.youtube.com/@RAtheRuggedManVEVO"
+  },
+  "ADdpLv3RDhA": {
+    "title": "Fuck Tha Police",
+    "channel": "N.W.A. - Topic",
+    "channelUrl": "https://www.youtube.com/channel/UCZ4DZXWEzXbeUgHv1-MTvEg"
   }
 };

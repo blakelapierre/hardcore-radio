@@ -40,6 +40,7 @@ window.STATION_ARTISTS = {
     "necro": { name: "Necro", bio: "Necro (Ron Braunstein) is a New York rapper and producer. In 1999 he founded the independent label Psycho+Logical-Records. He's worked in groups with his older brother Ill Bill and in the duo The Godfathers with Kool G Rap." },
     "jt-music": { name: "JT Music", bio: "JT Music is a YouTube channel that makes rap songs about video games. Its 2018 collection runs from Assassin's Creed to Overwatch, and Genius credits Christian Ames as writer and producer on \"Adrenaline Junkie.\"" },
     "system-of-a-down": { name: "System of a Down", bio: "System of a Down is an Armenian-American heavy metal band formed in Glendale, California, in 1994. The members are Serj Tankian, Daron Malakian, Shavo Odadjian and drummer John Dolmayan." },
+    "nwa": { name: "N.W.A", bio: "N.W.A was a hip-hop group formed in Compton, California, in 1987. It is counted among the earliest and most significant gangsta rap acts and is widely considered one of the most influential groups in hip-hop." },
     "sadat-x": { name: "Sadat X", bio: "Sadat X (Derek Murphy) is a rapper and educator best known as a member of the alternative hip-hop group Brand Nubian. He took his name from former Egyptian president Anwar Sadat." },
     "rage-against-the-machine": { name: "Rage Against the Machine", bio: "Rage Against the Machine formed in Los Angeles in 1991: Zack de la Rocha, Tom Morello, Tim Commerford and Brad Wilk. They fused metal, rap, punk and funk with revolutionary politics, sold more than 16 million records, and were inducted into the Rock and Roll Hall of Fame in 2023." },
     "canon": { name: "Canon", bio: "Canon (Aaron McCain) is a Christian rapper from Chicago. Lecrae mentored him and took him on tour as his hype man. He then signed with Reflection Music Group, released the Loose Canon EP in 2012, and reached the Billboard 200 with Loose Canon, Vol. 2 in 2014." },
@@ -77,5 +78,6 @@ window.STATION_ARTISTS = {
     "mna8mZP9eSg": ["system-of-a-down"],
     "lSBS1KNuvoc": ["army-of-the-pharaohs", "vinnie-paz"],
     "6_sLbVrJPJQ": ["ra-the-rugged-man", "vinnie-paz", "sadat-x"],
+    "ADdpLv3RDhA": ["nwa"],
   },
 };
